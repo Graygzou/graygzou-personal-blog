@@ -1,0 +1,12 @@
+
+  [en]
+    contentDir = "content/en"
+    languageName = "English"
+    emoji = ":us:"
+    weight = 1
+  
+  [fr]
+    contentDir = "content/fr"
+    languageName = "Français"
+    emoji = ":fr:"
+    weight = 2

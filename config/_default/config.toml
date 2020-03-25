@@ -1,0 +1,77 @@
+baseURL = "http://graygzou.github.io/graygzou-personal-blog/"
+languageCode = "en-us"
+title = "Graygzou Personal Blog"
+enableRobotsTXT=true
+log=true
+googleAnalytics="todo"
+
+[sitemap]
+  changefreq = "monthly"
+  priority = 0.5
+  filename = "sitemap.xml"
+
+[languages]
+  [languages.en]
+    contentDir = "content/en"
+    languageName = "English"
+    weight = 1
+    [languages.en.params]
+      emoji = ":us:"
+      linkedin = "todo"
+  [languages.fr]
+    contentDir = "content/fr"
+    languageName = "Français"
+    weight = 2
+    [languages.fr.params]
+      emoji = ":fr:"
+      linkedin = "todo"
+
+[params]
+  author = "Grégoire Boiron"
+  description = "Personal blog of the amazing Graygzou. Find tutorials, tips and tricks, and many more!"
+  [params.social]
+    [params.social.twitter]
+      name = "Twitter"
+      path = "https://twitter"
+    [params.social.github]
+      name = "Github"
+      path = "https://github"
+    [params.social.linkedin]
+      name = "Linkedin"
+      path = "https://linkedin"
+    [params.social.gamejolt]
+      name = "Gamejolt"
+      path = "https://gamejolt"
+    [params.social.itch]
+      name = "Itch.io"
+      path = "https://itch.io"
+
+[menu]
+  [[menu.main]]
+    identifier = "Home"
+    name = "Home"
+    pre = "<i class='fa fa-heart'></i>"
+    url = ""
+    weight = -110
+  [[menu.main]]
+    identifier = "Blog"
+    name = "Blog"
+    post = "<span class='alert'>New!</span>"
+    pre = "<i class='fa fa-road'></i>"
+    url = ""
+    weight = -80
+  [[menu.main]]
+    name = "About"
+    identifier = "About"
+    post = "<span class='alert'>New!</span>"
+    pre = "<i class='fa fa-road'></i>"
+    url = ""
+    weight = -70
+  [[menu.main]]
+    name = "Website"
+    identifier = "Website"
+    post = "<span class='alert'>New!</span>"
+    pre = "<i class='fa fa-road'></i>"
+    url = "https://graygzou.github.io/"
+    weight = -70
+

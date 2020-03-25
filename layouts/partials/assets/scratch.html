@@ -1,0 +1,39 @@
+<!---
+#############################################################################
+# Grégoire Boiron <gregoire.boiron@gmail.com>
+# Copyright (c) 2020 Grégoire Boiron  All Rights Reserved.
+#
+# Original from https://github.com/regisphilibert/rp_hugo_theme/blob/master/layouts/partials/assets/scratch.html
+#
+# Description:
+# This script allow to gather all scratch assignements in one file.
+# See https://gohugo.io/functions/scratch#readout for more info on scratch function (basically an assign function)
+#############################################################################
+--->
+
+<!-- This allow to have a contact.js imported -->
+<!--
+{{- if and (eq .Params.layout "contact") (ne .Lang "ja") -}}
+    {{- .Scratch.Set "script" (slice (resources.Get "js/contact.js") (resources.Get "js/main.js") | resources.Concat "js/bundle.contact.js") -}}
+{{ else }}
+    {{- .Scratch.Set "script" (resources.Get "js/main.js") -}}
+{{- end -}}
+-->
+
+<!--{{- .Scratch.Set "modernizr" (resources.Get "js/modernizr.js") -}}-->
+
+<!-- This if permits to specify want we're using hugo server (development in my case) -->
+<!--
+{{ if .Site.IsServer }}
+    IsServer hitted !
+    {{ .Scratch.Set "style" (resources.Get "sass/gamefolio.scss" | toCSS ) -}}
+{{- else -}}
+    IsNotServer hitted !--> 
+    <!-- TODO -->
+    <!--
+	{{ .Scratch.Set "style" (resources.Get "sass/gamefolio.scss" | toCSS | minify | fingerprint ) }}-->
+	<!--{{ .Scratch.Set "script" (.Scratch.Get "script" | minify | fingerprint) }}
+	{{ .Scratch.Set "modernizr" (.Scratch.Get "modernizr" | fingerprint) }}--><!--
+{{- end -}}-->
+
+<!--{{ .Scratch.Set "critical" (resources.Get "sass/critical.scss" | toCSS | minify) }}-->

@@ -1,0 +1,25 @@
+<footer class="site-footer h-card">
+    <div class="wrapper">
+      <h2 class="footer-heading">{{ $.Site.Title }}</h2>
+      <div class="footer-col-wrapper">
+        <div class="footer-col footer-col-3">
+          <ul class="contact-list">
+            <li class="p-name">
+              {{ if $.Site.Params.author }}
+                {{ $.Site.Params.author }}
+              {{ else }}
+                {{ $.Site.title }}
+              {{ end }}
+              </li>
+              {{ if $.Site.Params.email }}
+              <li><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+              {{ end }}
+          </ul>
+        </div>
+        <div class="footer-col footer-col-3">
+          <p>{{ $.Site.Params.description }}</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  

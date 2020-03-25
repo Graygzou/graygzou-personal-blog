@@ -1,0 +1,10 @@
+{{ define "main" }}
+    
+
+    HELLO LIST <br>
+
+    {{ .Content }}
+    {{ range .Pages }}
+        {{.Title}} <br>
+    {{end}}
+{{ end }}

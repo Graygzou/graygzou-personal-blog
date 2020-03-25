@@ -1,0 +1,4 @@
+- make the header like personal website
+- make the footer like personal website
+- move blog posts from personal website to here
+- create 404.html webpage (based on personal website)
