@@ -1,15 +1,17 @@
 <header class="site-header">
     <div class="wrapper">
         <div class="profil-header">
-            <p class="profil-description"></p>
+            <a class="site-title" rel="author" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+            <p class="profil-description">{{ .Site.Params.role }}</p>
             <ul class="social-media-list">
-            {{ range $.Site.Params.Social }}
+            {{ range sort $.Site.Params.Social "order" }}
                 <li>
-                <a href="" aria-label="{{ .Social.Name }}">
-                    <!--<svg class="svg-icon">
-                    </svg>-->
-                    {{ .Name }}
-                </a>
+                    <a href="{{ .Path }}" aria-label="{{ .Name }}">
+                        <svg class="svg-icon">
+                            <use xlink:href="{{ print `svg/gamefolio-social-icons.svg` `#` (lower .Name) | relURL }}">
+                            </use>
+                        </svg>
+                    </a>
                 </li>
             {{ end }}
             </ul>

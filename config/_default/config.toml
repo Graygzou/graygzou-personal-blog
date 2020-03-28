@@ -1,6 +1,6 @@
 baseURL = "http://graygzou.github.io/graygzou-personal-blog/"
 languageCode = "en-us"
-title = "Graygzou Personal Blog"
+title = "Grégoire Boiron"
 enableRobotsTXT=true
 log=true
 googleAnalytics="todo"
@@ -28,23 +28,29 @@ googleAnalytics="todo"
 
 [params]
   author = "Grégoire Boiron"
+  role = "Generalist Programmer"
   description = "Personal blog of the amazing Graygzou. Find tutorials, tips and tricks, and many more!"
   [params.social]
     [params.social.twitter]
       name = "Twitter"
       path = "https://twitter"
+      order = 1
     [params.social.github]
       name = "Github"
       path = "https://github"
+      order = 2
     [params.social.linkedin]
       name = "Linkedin"
       path = "https://linkedin"
+      order = 3
     [params.social.gamejolt]
       name = "Gamejolt"
       path = "https://gamejolt"
+      order = 4
     [params.social.itch]
-      name = "Itch.io"
+      name = "Itch-dot-io"
       path = "https://itch.io"
+      order = 5
 
 [menu]
   [[menu.main]]

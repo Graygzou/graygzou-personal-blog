@@ -2,9 +2,13 @@
     {{ partial "head" . }}
     <body>
         {{ partial "header" . }}
-        <main role="main">
-            {{ block "main" . }}{{ end }}
+
+        <main role="main" class="page-content" aria-label="Content">
+            <div class="wrapper">
+                {{ block "main" . }}{{ end }}
+            </div>
         </main>
+        
         <!-- Can it be really cached ? (meaning not changing between pages) -->
         {{ partialCached  "footer" . }}
     </body>
