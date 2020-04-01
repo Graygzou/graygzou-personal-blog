@@ -1,5 +1,5 @@
 ---
-title: Hugo Modules
+title: Miscalleneous
 linktitle: Hugo Modules Overview
 description: How to use Hugo Modules.
 date: 2017-02-01

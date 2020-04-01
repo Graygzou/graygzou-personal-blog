@@ -2,6 +2,7 @@
 
     {{ .Content }}
 
+    <!--
     {{ $currentPage := . }}
     <nav role="navigation">
     <ul class="list">
@@ -11,7 +12,10 @@
         here
         {{ end }}
         <li>
-            <a href="{{ if .HasChildren }}javascript:void(0){{ else }}{{ .URL }}{{ end }}" class="{{if or ($currentPage.IsMenuCurrent "docs" .) ($currentPage.HasMenuCurrent "docs" .) }} primary-color{{end}}" data-target=".{{ .Identifier }}">{{ .Name }}</a>
+            {{ $post }}
+            {{ . }}
+            {{ .URL }}
+            <a href="{{- if .HasChildren -}}{{ .URL }}{{ else }}javascript:void(0){{ end }}" class="{{if or ($currentPage.IsMenuCurrent "docs" .) ($currentPage.HasMenuCurrent "docs" .) }} primary-color{{end}}" data-target=".{{ .Identifier }}">{{ .Name }}</a>
             {{- if .HasChildren }}
             {{ .Identifier }}
             <ul class="{{ .Identifier }}{{if $currentPage.HasMenuCurrent "docs" . }} db{{ else }} dn{{ end }}">
@@ -27,6 +31,23 @@
         </li>
         {{- end}}
     </ul>
-    </nav>
+    </nav>-->
+
+    
+    {{ $paginator := .Paginate (.Pages | lang.Merge (where .Sites.First.RegularPages "Section" .Section)) -}}
+    fefwehi
+    {{ $paginator }}
+    ddwdf
+    {{ range $paginator.Pages }}
+        {{ if eq .Type "post" }}
+            {{/* Set all the parameters before calling the partial */}}
+            {{ $context := . }}
+            {{ $classes := $.Site.Params.flex_box_interior_classes }}
+            {{ $fullcontent := false }}
+            {{/* Call the partials to display preview boxes */}}
+            {{ partial "boxes-section-list" (dict "context" . "fullcontent" false) }}
+        {{ end }}
+    {{ end }}
+
 
 {{ end }}

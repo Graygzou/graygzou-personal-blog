@@ -1,10 +1,29 @@
 {{ define "main" }}
-    
 
-    HELLO LIST <br>
+  <h1>{{ .Title }}</h1>
 
-    {{ .Content }}
-    {{ range .Pages }}
-        {{.Title}} <br>
-    {{end}}
+  {{ .Content }}
+
+  <section>
+    {{- if .InSection .FirstSection -}}
+      <!-- Special layout for main posts/_index.html page -->
+      {{ $paginator := .Paginate .Pages -}}
+      {{ range $paginator.Pages }}
+        {{ partial "boxes-section-list" (dict "context" . "fullcontent" false) }}
+      {{ end }}
+    {{- else -}}
+      <!-- Layout for the rest of folders inside posts/ folder -->
+      <ul>
+        {{ $currentSectionName := .CurrentSection.Name }}
+        {{ $pages := (where .Site.RegularPages "Section" "posts") }}
+        {{/* $paginator := .Paginate ($pages.GroupByPublishDate ($.Param "talksGroupByDate" | default "2006")) 1 */}}
+        {{/* range $paginator.Pages */}}
+        {{ range $pages }}
+          {{ if eq $currentSectionName .Parent.Name }}
+            {{ partial "section-list" (dict "context" . "fullcontent" false) }}
+          {{ end }}
+        {{ end }}
+      </ul>
+    {{ end }}
+  </section>
 {{ end }}

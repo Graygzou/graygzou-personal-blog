@@ -1,9 +1,10 @@
 baseURL = "http://graygzou.github.io/graygzou-personal-blog/"
-languageCode = "en-us"
+languageCode = "en"
 title = "Grégoire Boiron"
 enableRobotsTXT=true
 log=true
 googleAnalytics="todo"
+EnableMissingTranslationPlaceholders=true
 
 [sitemap]
   changefreq = "monthly"
@@ -12,6 +13,7 @@ googleAnalytics="todo"
 
 [languages]
   [languages.en]
+    lang = "en"
     contentDir = "content/en"
     languageName = "English"
     weight = 1
@@ -19,6 +21,7 @@ googleAnalytics="todo"
       emoji = ":us:"
       linkedin = "todo"
   [languages.fr]
+    lang = "fr"
     contentDir = "content/fr"
     languageName = "Français"
     weight = 2
@@ -27,8 +30,11 @@ googleAnalytics="todo"
       linkedin = "todo"
 
 [params]
+  mainSections = ["posts"]
+  blogSections = ["tutorials", "cheatsheets", "miscallenous", "tipsAndTricks"]
   author = "Grégoire Boiron"
   role = "Generalist Programmer"
+  email = "gregoire.boiron@gmail.com"
   description = "Personal blog of the amazing Graygzou. Find tutorials, tips and tricks, and many more!"
   [params.social]
     [params.social.twitter]

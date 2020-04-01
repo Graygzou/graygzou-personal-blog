@@ -422,3 +422,13 @@ object {
     animation: fadein 2s, fadeout 2s 3.5s;
   }
 }
+
+.breadcrumb {
+  list-style: none;
+  min-height: 30px;
+  margin: auto;
+  li {
+    float: left;
+    padding-right: $spacing-unit / 3;
+  }
+}

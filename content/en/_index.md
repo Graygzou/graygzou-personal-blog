@@ -1,6 +1,6 @@
 ---
 title: "Graygzou Blog"
-featured_image: '/images/gohugo-default-sample-hero-image.jpg'
+type: Posts
 description: "No description needed ?"
 ---
 # Welcome

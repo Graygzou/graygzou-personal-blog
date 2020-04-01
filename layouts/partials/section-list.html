@@ -1,0 +1,13 @@
+<li>
+    {{ .Date }}
+    {{ i18n "postdateformat" }}
+    <date datetime="{{ .Date.Format (i18n `postdateformat`) }}">
+        {{ .Date.Format (i18n "postdateformat") }}
+    </date>
+
+    <h1>
+        <a href="{{ .context.RelPermalink }}">
+            {{ .context.Title }}
+        </a>
+    </h1>
+</li>
