@@ -428,7 +428,7 @@ object {
   min-height: 30px;
   margin: auto;
   li {
-    float: left;
+    display: inline-block;
     padding-right: $spacing-unit / 3;
   }
 }

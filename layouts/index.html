@@ -33,20 +33,10 @@
     </ul>
     </nav>-->
 
-    
-    {{ $paginator := .Paginate (.Pages | lang.Merge (where .Sites.First.RegularPages "Section" .Section)) -}}
-    fefwehi
-    {{ $paginator }}
-    ddwdf
-    {{ range $paginator.Pages }}
-        {{ if eq .Type "post" }}
-            {{/* Set all the parameters before calling the partial */}}
-            {{ $context := . }}
-            {{ $classes := $.Site.Params.flex_box_interior_classes }}
-            {{ $fullcontent := false }}
-            {{/* Call the partials to display preview boxes */}}
-            {{ partial "boxes-section-list" (dict "context" . "fullcontent" false) }}
-        {{ end }}
+    <h2>Latest Articles</h2>
+
+    {{ range .Site.AllPages }}
+        {{ . }}
     {{ end }}
 
 
