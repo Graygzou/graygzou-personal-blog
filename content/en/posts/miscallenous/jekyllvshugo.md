@@ -1,4 +1,6 @@
-
+---
+Title: "My experience with Jekyll vs Hugo"
+---
 ## Default theme
 Jekyll as the minimal theme embeded by default. which is quite simple and nice. Compared to hugo which shipped with nothing.
 Having a "small" default theme is nice to start customizating it to make your own one. Compare to hugo which you can't really start from a "ready to ship" theme. Harder to customize so better to start with nothing or start with theme that match your needs.

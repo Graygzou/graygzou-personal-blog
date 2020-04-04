@@ -1,10 +1,11 @@
 ---
-title: "Graygzou Blog"
+title: "Welcome"
 type: Posts
 description: "No description needed ?"
 ---
-# Welcome
 
-Welcome to my blog with some of my work in progress. I've been working on this book idea. 
+The purpose of this blog is to share my knownledge but also share my struggle as I go throught differents topics in my computer science engineer's life.
 
-To begin with, choose the sections you wish to explore:
+Topics are "vaste" and broad. My focus will vary depends on my current side projects. And those can shift pretty quickly..
+
+Feel free to reach me on usual social networks.

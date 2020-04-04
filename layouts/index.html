@@ -2,41 +2,19 @@
 
     {{ .Content }}
 
-    <!--
-    {{ $currentPage := . }}
-    <nav role="navigation">
-    <ul class="list">
-        {{ range .Site.Menus.docs.ByWeight }}
-        {{ $post := printf "%s" .Post }}
-        {{ if eq $post "break" }}
-        here
-        {{ end }}
-        <li>
-            {{ $post }}
-            {{ . }}
-            {{ .URL }}
-            <a href="{{- if .HasChildren -}}{{ .URL }}{{ else }}javascript:void(0){{ end }}" class="{{if or ($currentPage.IsMenuCurrent "docs" .) ($currentPage.HasMenuCurrent "docs" .) }} primary-color{{end}}" data-target=".{{ .Identifier }}">{{ .Name }}</a>
-            {{- if .HasChildren }}
-            {{ .Identifier }}
-            <ul class="{{ .Identifier }}{{if $currentPage.HasMenuCurrent "docs" . }} db{{ else }} dn{{ end }}">
-            {{- range .Children }}
-            <li class="f6 fw4">
-                <a href="{{.URL}}" class="{{if $currentPage.IsMenuCurrent "docs" . }}primary-color {{ else }}black {{end}}">
-                {{ .Name }}
-                </a>
-            </li>
-            {{- end}}
-            </ul>
-            {{- end}}
-        </li>
-        {{- end}}
-    </ul>
-    </nav>-->
+    {{ partial "random-quotes" (dict "context" . ) }}
+
+    <h2>Weekly finding</h2>
+    Here is the coolest stuff I found on the Internet / social network this week:
+
+    {{ partial "weekly-finding" }}
 
     <h2>Latest Articles</h2>
 
-    {{ range .Site.AllPages }}
-        {{ . }}
+    {{ $currentLang := .Site.Language.Lang }}
+    {{ $posts := where (where .Site.AllPages "Type" "in" site.Params.mainSections) "IsNode" "==" false }}
+    {{ range first .Site.Params.NbLatestPosts (where $posts "Language.Lang" "=" $currentLang).ByDate.Reverse }}
+        {{ partial "post-summary" (dict "context" . "fullcontent" false) }}
     {{ end }}
 
 

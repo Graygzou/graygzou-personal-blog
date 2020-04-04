@@ -5,7 +5,9 @@
 
         <main role="main" class="page-content" aria-label="Content">
             <div class="wrapper">
-                {{ partial "breadcrumb" . }}
+                {{ block "breadcrumb" . }}{{ end }}
+
+                <h1>{{ .Title }}</h1>
 
                 {{ block "main" . }}{{ end }}
             </div>
