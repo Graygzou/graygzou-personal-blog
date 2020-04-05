@@ -1,24 +1,13 @@
-
-
-
-<nav style="display:inline-block;">
-    <input type="checkbox" id="nav-trigger" class="nav-trigger" />
-    <label for="nav-trigger">
-        <span>
+<nav class="language-nav">
+    <input type="checkbox" id="language-trigger" class="language-trigger" />
+    <label for="language-trigger">
+        <span class="language-icon">
             {{ emojify .Site.Language.Params.Emoji }}
         </span>
     </label>
-
-
-    
-
-    <div class="trigger" style="display:none;">
-        <ul>
-            {{ range $.Site.Home.AllTranslations }}
-                <li>
-                    <a href="{{ .Permalink }}">{{ emojify .Language.Params.Emoji }}</a>
-                </li>
-            {{ end }}
-        </ul>
+    <div class="languages-trigger">
+        {{ range $.Site.Home.AllTranslations }}
+            <a class="page-link" href="{{ .Permalink }}">{{ emojify .Language.Params.Emoji }}</a>
+        {{ end }}
     </div>
 </nav>

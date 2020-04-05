@@ -24,3 +24,7 @@ Jekyll documentation is not bad but could be improved I guess. (some information
 
 ## Github integration
 Jekyll is better ?
+
+
+## Whitespaces problem ?
+Use {{- -}} Instead of {{ }}. Life saver.
