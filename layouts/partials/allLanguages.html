@@ -5,9 +5,24 @@
             {{ emojify .Site.Language.Params.Emoji }}
         </span>
     </label>
+    {{ $currentDir := .Dir }}
     <div class="languages-trigger">
         {{ range $.Site.Home.AllTranslations }}
-            <a class="language-link" href="{{ .Permalink }}">{{ emojify .Language.Params.Emoji }}</a>
+            {{ ( $currentDir | relLangURL) }}
+            {{ fileExists (string ((path.Join .RelPermalink $currentDir) | relLangURL )) }}
+            {{ with ((path.Join .RelPermalink $currentDir) | absLangURL) "section" .Key }}
+            blafa
+            {{ else }}
+            ogogogo
+            {{ end }}
+            {{/* $translationExists := (fileExists (path.Join .RelPermalink $currentDir)) | absLangURL */}}
+            {{/* $translationExists */}}
+
+            {{ if true }}
+            <a class="language-link" href="{{ path.Join .RelPermalink $currentDir }}">{{ emojify .Language.Params.Emoji }}</a>
+            {{ else }}
+            <a class="language-link" href="{{ .RelPermalink }}">{{ emojify .Language.Params.Emoji }}</a>
+            {{ end }}
         {{ end }}
     </div>
 </nav>
