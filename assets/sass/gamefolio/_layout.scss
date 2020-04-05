@@ -77,7 +77,7 @@
       border: 1px solid $grey-color-light;
     }
 
-    label[for="nav-trigger"], label[for="language-trigger"] {
+    label[for="nav-trigger"] {
       display: block;
       float: right;
       width: 36px;
@@ -100,12 +100,12 @@
       }
     }
 
-    input ~ .trigger, input ~ .languages-trigger {
+    input ~ .trigger {
       clear: both;
       display: none;
     }
 
-    input:checked ~ .trigger, input:checked ~ .languages-trigger {
+    input:checked ~ .trigger {
       display: block;
       padding-bottom: 5px;
     }
@@ -125,12 +125,14 @@
 
 .language-nav {
   display: inline-block;
+  position: relative;
   border-radius: 5px;
   background-color: $background-color;
   border: 1px solid $grey-color-light;
   text-align: right;
   margin-right: 20px;
   vertical-align: top;
+  text-align: right;
 
   .language-trigger {
     display: none;
@@ -159,6 +161,18 @@
     }
   }
 
+  // Rename that class
+  .languages-trigger {
+    position: absolute;
+    top: 32px;
+    left: 0px;
+    right: 0px;
+    border-radius: 0 0 5px 5px;
+    background-color: $background-color;
+    border: 1px solid $grey-color-light;
+    border-top: 0;
+  }
+
   input ~ .languages-trigger {
     clear: both;
     display: none;
@@ -169,14 +183,13 @@
     padding-bottom: 5px;
   }
 
-  .page-link {
+  .language-link {
     display: block;
-    padding: 5px 10px;
+    padding: 0 10px;
 
     & {
       margin-right: 0;
     }
-    margin-left: 20px;
   }
 }
 
