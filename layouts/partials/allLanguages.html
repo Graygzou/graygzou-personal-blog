@@ -5,24 +5,11 @@
             {{ emojify .Site.Language.Params.Emoji }}
         </span>
     </label>
-    {{ $currentDir := .Dir }}
-    <div class="languages-trigger">
-        {{ range $.Site.Home.AllTranslations }}
-            {{ ( $currentDir | relLangURL) }}
-            {{ fileExists (string ((path.Join .RelPermalink $currentDir) | relLangURL )) }}
-            {{ with ((path.Join .RelPermalink $currentDir) | absLangURL) "section" .Key }}
-            blafa
-            {{ else }}
-            ogogogo
-            {{ end }}
-            {{/* $translationExists := (fileExists (path.Join .RelPermalink $currentDir)) | absLangURL */}}
-            {{/* $translationExists */}}
 
-            {{ if true }}
-            <a class="language-link" href="{{ path.Join .RelPermalink $currentDir }}">{{ emojify .Language.Params.Emoji }}</a>
-            {{ else }}
-            <a class="language-link" href="{{ .RelPermalink }}">{{ emojify .Language.Params.Emoji }}</a>
-            {{ end }}
+    {{ $currentDir := .File.Dir }}
+    <div class="languages-trigger">
+        {{ range .Site.Home.AllTranslations }}
+            {{- partial "language/languageLink.html" (dict "context" . "translatedPath" (path.Join "content" .Language $currentDir) "currentDir" $currentDir) -}}
         {{ end }}
     </div>
 </nav>

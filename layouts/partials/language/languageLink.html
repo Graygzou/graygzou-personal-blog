@@ -1,0 +1,5 @@
+{{ if fileExists .translatedPath }}
+<a class="language-link" href="{{ path.Join .context.RelPermalink .currentDir }}">{{ emojify .context.Language.Params.Emoji }}</a>
+{{ else }}
+<a class="language-link" href="{{ .context.RelPermalink }}">{{ emojify .context.Language.Params.Emoji }}</a>
+{{ end }}
