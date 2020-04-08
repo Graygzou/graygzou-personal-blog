@@ -1,21 +1,22 @@
 {{ define "main" }}
-
-    {{ .Content }}
-
-    {{ partial "random-quotes" (dict "context" . ) }}
-
+    <section>
+        {{ .Content }}
+        {{ partial "random-quotes" (dict "context" . ) }}
+    </section>
+    
     <h2>Weekly finding</h2>
-    Here is the coolest stuff I found on the Internet / social network this week:
+    <section>
+        Here is the coolest stuff I found on the Internet / social network this week:
 
-    {{ partial "weekly-finding" }}
+        {{ partial "weekly-finding" (dict "context" . ) }}
+    </section>
 
     <h2>Latest Articles</h2>
-
-    {{ $currentLang := .Site.Language.Lang }}
-    {{ $posts := where (where .Site.AllPages "Type" "in" site.Params.mainSections) "IsNode" "==" false }}
-    {{ range first .Site.Params.NbLatestPosts (where $posts "Language.Lang" "=" $currentLang).ByDate.Reverse }}
-        {{ partial "post-summary" (dict "context" . "fullcontent" false) }}
-    {{ end }}
-
-
+    <section>
+        {{ $currentLang := .Site.Language.Lang }}
+        {{ $posts := where (where .Site.AllPages "Type" "in" site.Params.mainSections) "IsNode" "==" false }}
+        {{ range first .Site.Params.NbLatestPosts (where $posts "Language.Lang" "=" $currentLang).ByDate.Reverse }}
+            {{ partial "post-summary" (dict "context" . "fullcontent" false) }}
+        {{ end }}
+    </section>
 {{ end }}

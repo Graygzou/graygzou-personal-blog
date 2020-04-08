@@ -1,5 +1,5 @@
 ---
-title: "Blog sections"
+title: "Blog"
 description: "No description needed ?"
 ---
 

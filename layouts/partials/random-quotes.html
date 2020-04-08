@@ -5,4 +5,12 @@
 {{/* Select a random quote based on the json data set "quotes.json". */}}
 {{ $quote := (index .context.Site.Data.quotes "1") }}
 
-<p>"{{ $quote.Text }}"</p> <span>- {{ $quote.Author }}</span>
+<blockquote>
+    <span>
+        {{ $quote.Text | markdownify }}
+    </span>
+    — 
+    <cite>
+        {{ $quote.Author }}
+    </cite>
+</blockquote>
