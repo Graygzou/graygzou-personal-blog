@@ -4,9 +4,9 @@
 {{ range first 1 $weeklyFindingSection.ByDate.Reverse }}
 <div>
     <h3 class="project-heading"><a a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-    <span>{{ .Description }}</span>
+    <p>{{ .Description }}</p>
     {{ $thumbnail_image := .Params.thumbnail }}
-    <img src="{{ $thumbnail_image }}" alt="{{ $thumbnail_image }}" />
+    <img class="post-image" src="{{ $thumbnail_image }}" alt="{{ $thumbnail_image }}" />
     <div class="post-summary">
         {{ .Summary | plainify }}
         {{ if .Truncated }}
