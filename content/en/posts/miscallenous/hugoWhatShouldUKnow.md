@@ -1,6 +1,8 @@
 ---
 Title: "Hugo website generator: What should you know."
 date: 2020-04-05T19:01:50+02:00
+image: img/juda[150x150].jpg
+tags: ["web", "hugo"]
 draft: true
 ---
 

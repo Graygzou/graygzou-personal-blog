@@ -1,19 +1,21 @@
 <!-- Center this ? -->
-<section>
-    {{/* Get weekly finding section */}}
-    {{ $weeklyFindingSection := where (where .context.Site.AllPages "Section" "weekly-finding") "Kind" "!=" "section" }}
-    {{ range first 1 $weeklyFindingSection.ByDate.Reverse }}
-    <div>
-        <h3 class="project-heading"><a a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-        <span>{{ .Description }}</span>
-        <div class="post-summary">
-            {{ .Summary | plainify }}
-            {{ if .Truncated }}
-            <a href="{{ .RelPermalink }}">Read More…</a>
-            {{ end }}
-        </div>
+{{/* Get weekly finding section */}}
+{{ $weeklyFindingSection := where (where .context.Site.AllPages "Section" "weekly-finding") "Kind" "!=" "section" }}
+{{ range first 1 $weeklyFindingSection.ByDate.Reverse }}
+<div>
+    <h3 class="project-heading"><a a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+    <span>{{ .Description }}</span>
+    {{ $thumbnail_image := .Params.thumbnail }}
+    <img src="{{ $thumbnail_image }}" alt="{{ $thumbnail_image }}" />
+    <div class="post-summary">
+        {{ .Summary | plainify }}
+        {{ if .Truncated }}
+        <a href="{{ .RelPermalink }}">Read More…</a>
+        {{ end }}
     </div>
-    {{ end }}
+</div>
+{{ end }}
 
-    <span class="float-right-link"><a href="{{ .Permalink }}">Archives ></a></span>
-</section>
+<span class="seemore-link">
+    <a href="{{ .Permalink }}">Archives &raquo;</a>
+</span>

@@ -1,0 +1,24 @@
+{{ define "breadcrumb" }}
+  {{ partial "breadcrumb" . }}
+{{ end }}
+
+{{ define "main" }}
+
+  <h1>{{ .Title }}</h1>
+
+  {{ .Content }}
+
+  <section>
+    <ul>
+
+      split
+
+      <br>
+
+      {{ $.Data }}
+      {{ range $.Data.Tag }}
+              <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> {{ .Count }}</li>
+      {{ end }}
+    </ul>
+  </section>
+{{ end }}
