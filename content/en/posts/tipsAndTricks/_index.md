@@ -1,7 +1,7 @@
 ---
 title: Tips & Tricks
 linktitle: Tips And Tricks
-description: Comprehensive list of Hugo templating functions, including basic and advanced usage examples.
+description: "Never learn something and say: this will save me countless hours of pain? Join! There will no doubt be surprises!"
 godocref:
 date: 2017-02-01
 publishdate: 2017-02-01
@@ -14,5 +14,3 @@ weight: 05	#rem
 draft: false
 aliases: [/layout/Tutorials/,/templates/Tutorials]
 ----
-
-tototo
