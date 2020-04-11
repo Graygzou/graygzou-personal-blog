@@ -1,3 +1,10 @@
+---
+Title: "Git Cheat Sheet"
+Description: TODO
+tags: ["raspberry-pi", "troubleshootings"]
+draft: true
+---
+
 # Raspberry Pi infos
 
 ## Having troubles with your tv screen ?

@@ -1,3 +1,10 @@
+---
+Title: "How to be a programmer"
+Description: TODO
+tags: ["soft skills"]
+draft: true
+---
+
 # How to be a Programmer: Community Version
 
 Original book link: https://braydie.gitbooks.io/how-to-be-a-programmer/content/en/

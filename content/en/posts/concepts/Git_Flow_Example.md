@@ -1,3 +1,11 @@
+---
+Title: Git Branching Flow
+Description: TODO
+Date: TODO
+tags: ["git", "branching"]
+draft: true
+---
+
 ## Before even cloning the repository
 
 ## Cloning the repository

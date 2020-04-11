@@ -3,6 +3,7 @@ Title: General Knowledge
 Description: TODO
 Date: TODO
 tags: []
+draft: true
 ---
 
 # Knowledge

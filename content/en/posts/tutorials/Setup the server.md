@@ -1,3 +1,10 @@
+---
+Title: "Setup serveur Raspberry pie NAS"
+Description: TODO
+tags: ["raspberry pi"]
+draft: true
+---
+
 # Setup the server
 In this part, we will see what I've done in order to setup the server for both client Windows and Ubuntu.
 

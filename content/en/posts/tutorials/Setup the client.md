@@ -1,3 +1,10 @@
+---
+Title: "Setup client Raspberry pie NAS"
+Description: TODO
+tags: ["raspberry pi"]
+draft: true
+---
+
 # Setup the client
 After setting up the server (see the dedicated file), I almost did all the job.
 Indeed, with a little bit of work, I was able to connect to the samba server with both of my client.

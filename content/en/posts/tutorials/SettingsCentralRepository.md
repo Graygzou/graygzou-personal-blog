@@ -1,3 +1,10 @@
+---
+Title: "Git Cheat Sheet"
+Description: TODO
+tags: ["raspberry-pi", "troubleshootings"]
+draft: true
+---
+
 # How to set a central repository in Git
 
 ### Background story

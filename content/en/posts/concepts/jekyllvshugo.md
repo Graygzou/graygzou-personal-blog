@@ -1,6 +1,8 @@
 ---
 Title: "My experience with Jekyll vs Hugo"
+Description: TODO
 tags: ["web", "jekyll", "hugo"]
+draft: true
 ---
 ## Default theme
 Jekyll as the minimal theme embeded by default. which is quite simple and nice. Compared to hugo which shipped with nothing.

@@ -1,6 +1,12 @@
+---
+Title: .NET and Common Language Runtime (CLR)
+Description: TODO
+Date: TODO
+tags: ["c#", "java"]
+draft: true
+---
+
 # Java JVM vs C# CLR
-
-
 digraph G {
 aize ="4,4";
     main [shape=box];
@@ -17,7 +23,6 @@ aize ="4,4";
     execute -> compare;
   }
 )
-
 
 ## Acknowledgment
 * [Stackoverflow - Java's Virtual Machine and CLR](https://stackoverflow.com/questions/453610/javas-virtual-machine-and-clr)

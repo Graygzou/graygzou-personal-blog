@@ -1,3 +1,11 @@
+---
+Title: .NET and Common Language Runtime (CLR)
+Description: TODO
+Date: TODO
+tags: ["c#"]
+draft: true
+---
+
 # Advance Features
 
 ## Managed plugins
