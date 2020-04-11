@@ -11,9 +11,12 @@
   <section>
     {{- if .InSection .FirstSection -}}
       <!-- Special layout for main posts/_index.html page -->
-      {{ $paginator := .Paginate .Pages -}}
+      {{/* Merge the if into the range with the where do not work properly.. */}}
+      {{ $paginator := .Paginate .Pages }}
       {{ range $paginator.Pages }}
-        {{ partial "boxes-section-list" (dict "context" . "fullcontent" false) }}
+        {{ if in site.Params.blogSections (path.Base .Dir) }}
+          {{ partial "boxes-section-list" (dict "context" . "fullcontent" false) }}
+        {{ end }}
       {{ end }}
     {{- else -}}
       <!-- Layout for the rest of folders inside posts/ folder -->

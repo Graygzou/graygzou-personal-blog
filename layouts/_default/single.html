@@ -4,4 +4,6 @@
 
 {{ define "main" }}
     {{ .Content }}
+
+    {{ template "_internal/disqus.html" . }}
 {{ end }}

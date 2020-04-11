@@ -5,6 +5,7 @@ enableRobotsTXT=true
 log=true
 googleAnalytics="todo"
 EnableMissingTranslationPlaceholders=true
+disqusShortname = "yourdiscussshortname"
 
 [sitemap]
   changefreq = "monthly"
@@ -13,7 +14,7 @@ EnableMissingTranslationPlaceholders=true
 
 [params]
   mainSections = ["posts"]
-  blogSections = ["tutorials", "cheatsheets", "miscallenous", "tipsAndTricks"]
+  blogSections = ["tutorials", "cheatsheets", "concepts", "tipsAndTricks"]
   author = "Grégoire Boiron"
   role = "Generalist Programmer"
   email = "gregoire.boiron@gmail.com"
