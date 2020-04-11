@@ -1,3 +1,11 @@
+---
+Title: "README"
+Description: TODO
+date: 2020-04-11T18:26:10+02:00
+tags: ["TODO"]
+draft: true
+---
+
 # Setup a NAS with a raspberry pi
 
 ## Introduction

@@ -1,7 +1,7 @@
 ---
 Title: .NET and Common Language Runtime (CLR)
 Description: TODO
-Date: TODO
+date: 2020-04-11T18:26:10+02:00
 tags: ["c#"]
 draft: true
 ---

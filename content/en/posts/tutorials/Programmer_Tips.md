@@ -1,6 +1,7 @@
 ---
 Title: "How to be a programmer"
 Description: TODO
+date: 2020-04-11T18:26:10+02:00
 tags: ["soft skills"]
 draft: true
 ---

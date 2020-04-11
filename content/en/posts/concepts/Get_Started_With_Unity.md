@@ -1,7 +1,7 @@
 ---
 Title: Unity Get Started
 Description: TODO
-Date: TODO
+date: 2020-04-11T18:26:10+02:00
 tags: ["unity", "c#", "engine"]
 draft: true
 ---

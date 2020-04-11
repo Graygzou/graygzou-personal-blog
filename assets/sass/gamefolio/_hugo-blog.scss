@@ -8,6 +8,48 @@
     float: left;
 }
 
-.post-summary {
+/*.post-summary {
     //margin-bottom: 10px;
+}*/
+
+.basic-list {
+    margin: auto;
+    list-style: none;
+}
+
+.post-list {
+    list-style: none;
+    position: relative;
+    
+    ::before {
+        content: '';
+        width: 2px;
+        background-color: gray;
+        position: absolute;
+        left: 3rem;
+        top: 0;
+        height: 100%;
+    }
+}
+
+.post-teaser {
+    padding: 5px 0;
+    width: 70%;
+
+    date {
+        border: 1px solid black;
+        padding: 2px;
+        border-radius: 6px;
+        word-break: keep-all;
+    }
+
+    > a {
+        margin-left: 10px;
+    }
+}
+
+.post-tags {
+    display: inline;
+    padding: 0 10px;
+    float: right;
 }

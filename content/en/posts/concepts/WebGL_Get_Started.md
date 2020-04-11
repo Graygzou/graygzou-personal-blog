@@ -1,6 +1,7 @@
 ---
 Title: "Web GL Get Started"
 Description: TODO
+date: 2020-04-11T18:26:10+02:00
 tags: ["engine", "webGL"]
 draft: true
 ---
