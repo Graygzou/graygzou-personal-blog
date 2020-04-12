@@ -17,24 +17,38 @@
     list-style: none;
 }
 
-.post-list {
+.timeline-title-date {
+    display: inline;
+    border: 5px solid gray;
+    border-radius: 6px;
+    padding: 0 2px;
+}
+
+.timeline-list {
     list-style: none;
     position: relative;
-    
-    ::before {
+    padding-left: 25px;
+    padding-top: 15px;
+    width: 70%;
+
+    :before {
         content: '';
-        width: 2px;
+        width: 5px;
         background-color: gray;
         position: absolute;
-        left: 3rem;
+        left: 8px;
         top: 0;
         height: 100%;
+    }
+
+    @include media-query($on-palm) {
+        width: auto;
     }
 }
 
 .post-teaser {
     padding: 5px 0;
-    width: 70%;
+    margin-bottom: auto;
 
     date {
         border: 1px solid black;
@@ -52,4 +66,19 @@
     display: inline;
     padding: 0 10px;
     float: right;
+}
+
+.tag-nav {
+    float: right;
+    width: 29%;
+
+    li {
+        display: inline-block;
+        font-size: 0.75em;
+        border: 1px solid gray;
+        padding: 0 2px;
+        margin: 2px 0;
+        border-radius: 6px;
+        background-color: burlywood;
+    }
 }

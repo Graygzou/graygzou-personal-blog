@@ -19,25 +19,33 @@
       {{ end }}
   </section>
   {{- else -}}
-  <section>
-      <!-- Layout for the rest of folders inside posts/ folder -->
-      <ul class="basic-list">
-        {{ $currentSectionName := .CurrentSection.Name }}
-        {{ $pages := (where .Site.RegularPages "Section" "posts") }}
-        {{ $paginator := $pages.GroupByPublishDate "2006-01" }}
-        {{ range $paginator }}
-          <section>
-            <h3>{{ .Key }}</h3>
-            <ul class="post-list">
-              {{ range .Pages }}
-                {{ if eq $currentSectionName .Parent.Name }}
-                  {{ partial "section-list" (dict "context" . "fullcontent" false) }}
-                {{ end }}
-              {{ end }}
-            </ul>
-          </section>
+    <!-- Layout for the rest of folders inside posts/ folder -->
+
+    <!-- Create tags navigation -->
+    {{ $.Data.Terms }}
+    <nav class="tag-nav">
+      <ul>
+        {{ range .Site.Taxonomies.tags }}
+          <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> {{ .Count }}</li>
         {{ end }}
       </ul>
-  </section>
+    </nav>
+
+    <!-- Create all the posts ordered by date -->
+    {{ $currentSectionName := .CurrentSection.Name }}
+    {{ $pages := (where .Site.RegularPages "Section" "posts") }}
+    {{ $paginator := $pages.GroupByPublishDate "2006-01" }}
+    {{ range $paginator }}
+      <section>
+        <h3 class="timeline-title-date">{{ .Key }}</h3>
+        <ul class="timeline-list">
+          {{ range .Pages }}
+            {{ if eq $currentSectionName .Parent.Name }}
+              {{ partial "section-list" (dict "context" . "fullcontent" false) }}
+            {{ end }}
+          {{ end }}
+        </ul>
+      </section>
+    {{ end }}
   {{ end }}
 {{ end }}
