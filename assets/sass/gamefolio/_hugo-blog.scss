@@ -70,7 +70,12 @@
 
 .tag-nav {
     float: right;
-    width: 29%;
+    width: 20%;
+    margin-left: $spacing-unit;
+
+    ul {
+        margin: auto;
+    }
 
     li {
         display: inline-block;

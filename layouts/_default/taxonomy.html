@@ -4,21 +4,18 @@
 
 {{ define "main" }}
 
-  <h1>{{ .Title }}</h1>
+  <h1>{{ .Title | humanize }}</h1>
 
   {{ .Content }}
 
-  <section>
-    <ul>
 
-      split
+  <!-- Create tags navigation -->
+  {{ partial "tag-navigation" (dict "context" .) }}
 
-      <br>
+  <ul>
+    {{ range .Pages }}
+      {{ partial "section-list" (dict "context" . "fullcontent" false) }}
+    {{ end }}
+  </ul>
 
-      {{ $.Data }}
-      {{ range $.Data.Tag }}
-              <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> {{ .Count }}</li>
-      {{ end }}
-    </ul>
-  </section>
 {{ end }}

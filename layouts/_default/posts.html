@@ -22,14 +22,8 @@
     <!-- Layout for the rest of folders inside posts/ folder -->
 
     <!-- Create tags navigation -->
-    {{ $.Data.Terms }}
-    <nav class="tag-nav">
-      <ul>
-        {{ range .Site.Taxonomies.tags }}
-          <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> {{ .Count }}</li>
-        {{ end }}
-      </ul>
-    </nav>
+    {{ partial "tag-navigation" (dict "context" .) }}
+    
 
     <!-- Create all the posts ordered by date -->
     {{ $currentSectionName := .CurrentSection.Name }}
