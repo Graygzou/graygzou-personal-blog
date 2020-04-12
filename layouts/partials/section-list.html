@@ -1,13 +1,26 @@
-<li class="post-teaser">
-    <date datetime="{{ .context.Date.Format (i18n `postdateformat`) }}">
-        {{ .context.Date.Format (i18n "postdateformat") }}
-    </date>
-    <a href="{{ .context.RelPermalink }}">
-        {{ .context.Title }}
-    </a>
-    <ul class="basic-list post-tags">
-        {{ range (.context.GetTerms "tags") }}
-        <li class="tag"><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
+
+{{ $paginator := .sectionposts.GroupByPublishDate "2006-01" }}
+{{ range $paginator }}
+    <section>
+        <h3 class="timeline-title-date">{{ .Key }}</h3>
+        <ul class="timeline-list">
+        {{ range .Pages }}
+            {{ if or (eq ($.sectionname | string) (.Parent.Name | string)) (not $.sectionname) }}
+                <li class="post-teaser">
+                    <date datetime="{{ .Date.Format (i18n `postdateformat`) }}">
+                        {{ .Date.Format (i18n "postdateformat") }}
+                    </date>
+                    <a href="{{ .RelPermalink }}">
+                        {{ .Title }}
+                    </a>
+                    <ul class="basic-list post-tags">
+                    {{ range (.GetTerms "tags") }}
+                        <li class="tag"><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
+                    {{ end }}
+                    </ul>
+                </li>
+            {{ end }}
         {{ end }}
-    </ul>
-</li>
+        </ul>
+    </section>
+{{ end }}

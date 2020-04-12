@@ -13,9 +13,8 @@
   {{ partial "tag-navigation" (dict "context" .) }}
 
   <ul>
-    {{ range .Pages }}
-      {{ partial "section-list" (dict "context" . "fullcontent" false) }}
-    {{ end }}
+    {{ $pages := .Pages }}
+    {{ partial "section-list" (dict "context" . "fullcontent" false "sectionposts" $pages) }}
   </ul>
 
 {{ end }}
