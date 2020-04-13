@@ -2,7 +2,7 @@
 Title: Git Basic Commands
 Description: TODO
 date: 2020-04-11T18:26:10+02:00
-tags: ["git", "commands"]
+tags: ["git"]
 draft: true
 ---
 
