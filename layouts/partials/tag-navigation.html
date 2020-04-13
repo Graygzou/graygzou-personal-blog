@@ -1,8 +1,48 @@
 <nav class="tag-nav">
-    <h3>Tags</h3>
-    <ul>
-      {{ range .context.Site.Taxonomies.tags }}
+  {{ $allTags := .context.Site.Taxonomies.tags }}
+
+  <!-- Get all the tags currently used in the website -->
+  {{ $types := slice }}
+  {{ range $allTags }}
+    {{ $types = $types | append .Page.Title }} <!-- get value of "type" -->
+  {{ end }}
+  {{ $types = uniq $types }} <!-- get unique types values -->
+
+  {{ range $title_key, $elem_tags := .context.Site.Params.TagsCategory }}
+    <section>
+      <h3>{{ $title_key | humanize }}</h3>
+      <!-- Iterate over all tags and find them -->
+      <ul>
+      {{ range $allTags }}
+        {{ $tag := . }}
+        {{ range $elem_tags.Tags }}
+          {{ if eq $tag.Page.Title . }}
+            <li style="background-color: {{ $elem_tags.Color }};"><a href="{{ $tag.Page.Permalink }}">{{ $tag.Page.Title }}</a> | {{ $tag.Count }}</li>
+          {{ end }}
+        {{ end }}
+      {{ end }}
+      </ul>
+    </section>
+  {{ end }}
+
+  <!-- Display the rest of tags not listed -->
+  <h3>Others</h3>
+  <ul>
+    {{ range $allTags }}
+      {{ $.context.Scratch.Set "found" "false" }}
+      {{ $tag := . }}
+      {{ range $title_key, $elem_tags := $.context.Site.Params.TagsCategory }}
+        {{ range $elem_tags.Tags }}
+          {{ if eq $tag.Page.Title . }}
+            {{ $.context.Scratch.Set "found" true }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
+
+      {{ $found := $.context.Scratch.Get "found" }}
+      {{ if eq $found "false" }}
         <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> {{ .Count }}</li>
       {{ end }}
-    </ul>
-  </nav>
+    {{ end }}
+  </ul>
+</nav>

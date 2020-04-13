@@ -24,7 +24,6 @@
     <!-- Create tags navigation -->
     {{ partial "tag-navigation" (dict "context" .) }}
     
-
     <!-- Create all the posts ordered by date -->
     {{ $currentSectionName := .CurrentSection.Name }}
     {{ $pages := (where .Site.RegularPages "Section" "posts") }}

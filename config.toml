@@ -20,6 +20,7 @@ disqusShortname = "yourdiscussshortname"
   email = "gregoire.boiron@gmail.com"
   description = "Personal blog of the amazing Graygzou. Find tutorials, tips and tricks, and many more!"
   nbLatestPosts = 4
+  
   [params.social]
     [params.social.twitter]
       name = "Twitter"
@@ -41,6 +42,24 @@ disqusShortname = "yourdiscussshortname"
       name = "Itch-dot-io"
       path = "https://itch.io"
       order = 5
+
+  [params.tagsCategory]
+    [params.tagsCategory.language]
+      title = "Languages"
+      color = "#78dce8"
+      tags = ["c#", "c++", "java", "lua", "js", "go", "ruby", "ada", "html", "css", "bash"]
+    [params.tagsCategory.engines]
+      title = "Engines"
+      color = "#ab9df2"
+      tags = ["unity", "unreal", "Jmonkey", "openGL", "webGL"]
+    [params.tagsCategory.techs]
+      title = "Tech"
+      color = "#ea9c77"
+      tags = ["docker", "raspberry-pi", "git", "branching", "hugo"]
+    [params.tagsCategory.concepts]
+      title = "Concepts"
+      color = "#fa2c71"
+      tags = ["web", "plugins"]
 
 [build]
   useResourceCacheWhen = "fallback"
