@@ -1,9 +1,11 @@
 {{ define "breadcrumb" }}
-    TODO use .Prev and .Next to do something cool
+    {{ partial "single-navigation.html" . }}
 {{ end }}
 
 {{ define "main" }}
     {{ .Content }}
+
+    {{ partial "single-navigation.html" . }}
 
     {{ template "_internal/disqus.html" . }}
 {{ end }}
