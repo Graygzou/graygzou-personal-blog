@@ -1,4 +1,4 @@
-baseURL = "http://graygzou.github.io/graygzou-personal-blog/"
+baseURL = ""
 languageCode = "en"
 title = "Grégoire Boiron"
 enableRobotsTXT=true
