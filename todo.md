@@ -1,4 +1,6 @@
-- 
+- Create "something special" at the end of single pages. Before navigation and comments.
+- Solve build scss
+- Do I need to add tags in single page?
 
 - Add disqus to my website
 
