@@ -4,8 +4,8 @@
         {{ partial "header" . }}
 
         <main role="main" class="page-content" aria-label="Content">
+            {{ block "breadcrumb" . }}{{ end }}
             <div class="home wrapper">
-                {{ block "breadcrumb" . }}{{ end }}
                 {{ block "main" . }}{{ end }}
             </div>
         </main>

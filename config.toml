@@ -6,6 +6,7 @@ log=true
 googleAnalytics="todo"
 EnableMissingTranslationPlaceholders=true
 disqusShortname = "yourdiscussshortname"
+summaryLength = 20
 
 [sitemap]
   changefreq = "monthly"

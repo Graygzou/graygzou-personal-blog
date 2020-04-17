@@ -1,19 +1,15 @@
 <div class="project-li">
-    <img src="{{ .context.Params.Image }}" alt="{{ .Title }}"/>
-    {{ .Date }}
-    {{ i18n "postdateformat" }}
-    <date datetime="{{ .Date.Format (i18n `postdateformat`) }}">
-        {{ .Date.Format (i18n "postdateformat") }}
-    </date>
+    <div class="project-img">
+        <img src="{{ .context.Params.Image }}" alt="{{ .Title }}"/>
+        <ul class="project-tags">
+            {{- range ( .context.GetTerms "tags")  -}}
+                <li class="tag"><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
+            {{- end -}}
+        </ul>
+    </div>
     <h1><a href="{{ .context.RelPermalink }}">{{ .context.Title }}</a></h1>
-
-    <p>
-        {{ .context.Summary }}
-    </p>
-
-    <ul>
-    {{ range ( .context.GetTerms "tags")  }}
-        <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
-    {{ end }}
-    </ul>
+    <date datetime="{{ .context.Date.Format (i18n `postdateformat`) }}">
+        {{ .context.Date.Format (i18n "postdateformat") }}
+    </date>
+    <p>{{ .context.Summary }}</p>
 </div>

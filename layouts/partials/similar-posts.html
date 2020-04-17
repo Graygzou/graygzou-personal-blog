@@ -1,0 +1,28 @@
+<!-- TODO Use tags + ML (lul) -->
+<nav class="tag-nav">
+    <!-- Display similare posts -->
+    <h3>Similar Content</h3>
+    <ul>
+        <!-- Special layout for main posts/_index.html page -->
+        {{ $t := .Site.GetPage "/tags" }}
+        {{ $t.Data.Terms.Term }}
+
+        {{ $test := .Params.tags }}
+        {{ $test }}
+
+        <!-- Regroup all the pages and do a shuffle on them -->
+        {{ range $t.Data.Terms.ByCount }}
+            {{ $tag := delimit (split .Term "-") " " }}
+            {{ if in $test (string $tag) }}
+                {{ .Pages }}
+                {{ range .Pages }}
+                    {{ . }}
+                {{ end }}
+            {{ end }}
+            <br>
+        {{ end }}
+
+        {{ range $elem_index, $elem_val := $t.Data.Terms.ByCount }}  
+        {{ end }}
+    </ul>
+  </nav>
