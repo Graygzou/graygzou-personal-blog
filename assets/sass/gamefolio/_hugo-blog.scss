@@ -8,6 +8,33 @@
     width:47%
 }
 
+// Use for post page
+.classic-ul {
+    list-style: none;
+    margin: 5px 0;
+}
+
+.post-published-date {
+    float: left;
+    margin-right: 10px;
+}
+
+.blog-post-title {
+    margin: auto;
+}
+
+.blog-section-description {
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #ecf3ff;
+}
+
+.post-separator {
+    margin: 10 300;
+}
+
+// End
+
 .project-img {
     float: left;
     padding-right: 10px;
@@ -72,10 +99,8 @@ blockquote {
         padding: 2px;
         border-radius: 6px;
         word-break: keep-all;
-    }
-
-    > a {
-        margin-left: 10px;
+        min-width: 85px;
+        text-align: center;
     }
 }
 

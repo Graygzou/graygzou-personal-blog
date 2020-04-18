@@ -13,13 +13,42 @@
       {{/* Merge the if into the range with the where do not work properly.. */}}
       {{ $paginator := .Paginate .Pages }}
       {{ range $paginator.Pages }}
-        {{ if in site.Params.blogSections (path.Base .Dir) }}
-          {{ partial "boxes-section-list" (dict "context" . "fullcontent" false) }}
-        {{ end }}
+          {{- if in site.Params.blogSections (path.Base .Dir) -}}
+          <div class="project-li">
+            <!-- Quick description of the current section -->
+            {{- partial "boxes-section-list" (dict "context" . "fullcontent" false) -}}
+
+            <!-- List all the newest posts. Others will be available thanks to the archive button -->
+            {{ $pages := (where .Site.RegularPages "Section" "posts") }}
+            {{ $sectionname := .Name }}
+            <ul class="classic-ul">
+            {{ range first 4 (where $pages "Parent.Name" "eq" ($sectionname | string)) }}
+              <li class="post-teaser">
+                  <date datetime="{{ .Date.Format (i18n `postdateformat`) }}" class="post-published-date">
+                      {{ .Date.Format (i18n "postdateformat") }}
+                  </date>
+                  <a href="{{ .RelPermalink }}" class="blog-post-title">{{ .Title }}</a>
+              </li>
+            {{ end }}
+            </ul>
+
+            <!-- Archive button -->
+            <a href="{{ .RelPermalink }}">Archives &raquo;</a>
+          </div>
+          {{ $nbSections := $.Scratch.Get "sections" }}
+          {{ $index := $.Scratch.Get "total" }}
+          {{ if and (eq (mod (add (int $nbSections) 1) 2) 0) (lt $index (sub $paginator.NumberOfElements 1)) }}
+            <hr class="post-separator">
+          {{ end }}
+          {{ $.Scratch.Add "sections" 1 }}
+          {{- end -}}
+          {{ $.Scratch.Add "total" 1 }}
       {{ end }}
   </section>
+
   {{- else -}}
     <!-- Layout for the rest of folders inside posts/ folder -->
+    <!-- Correspond to the archive section -->
 
     <!-- Create tags navigation -->
     {{ partial "tag-navigation" (dict "context" .) }}
