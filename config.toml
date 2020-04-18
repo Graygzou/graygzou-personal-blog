@@ -2,11 +2,11 @@ baseURL = ""
 languageCode = "en"
 title = "Grégoire Boiron"
 enableRobotsTXT=true
-log=true
-googleAnalytics="todo"
+googleAnalytics="UA-148345166-2"
 EnableMissingTranslationPlaceholders=true
-disqusShortname = "yourdiscussshortname"
+disqusShortname = "graygzou"
 summaryLength = 20
+log=true
 
 [sitemap]
   changefreq = "monthly"
@@ -25,23 +25,23 @@ summaryLength = 20
   [params.social]
     [params.social.twitter]
       name = "Twitter"
-      path = "https://twitter"
+      path = "https://twitter.com/GrayGzou"
       order = 1
     [params.social.github]
       name = "Github"
-      path = "https://github"
+      path = "https://github.com/Graygzou"
       order = 2
     [params.social.linkedin]
       name = "Linkedin"
-      path = "https://linkedin"
+      path = "https://www.linkedin.com/in/gregoire-boiron/"
       order = 3
     [params.social.gamejolt]
       name = "Gamejolt"
-      path = "https://gamejolt"
+      path = "https://gamejolt.com/@GrayGzou"
       order = 4
     [params.social.itch]
       name = "Itch-dot-io"
-      path = "https://itch.io"
+      path = "https://graygzou.itch.io/"
       order = 5
 
   [params.tagsCategory]
