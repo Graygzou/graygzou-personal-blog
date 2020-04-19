@@ -5,6 +5,7 @@ role = "Generalist Programmer"
 email = "gregoire.boiron@gmail.com"
 description = "Personal blog of the amazing Graygzou. Find tutorials, tips and tricks, and many more!"
 nbLatestPosts = 4
+menuIdNewPage = ["website"]
   
 [social]
     [social.twitter]

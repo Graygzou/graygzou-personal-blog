@@ -1,12 +1,12 @@
 [[main]]
-    identifier = "Home"
+    identifier = "home"
     name = "Home"
     pre = "<i class='fa fa-heart'></i>"
     url = "#"
     weight = -110
 
 [[main]]
-    identifier = "Blog"
+    identifier = "blog"
     name = "Blog"
     post = "<span class='alert'>New!</span>"
     pre = "<i class='fa fa-road'></i>"
@@ -14,7 +14,7 @@
     weight = -80
 
 [[main]]
-    identifier = "About"
+    identifier = "about"
     name = "About"
     post = "<span class='alert'>New!</span>"
     pre = "<i class='fa fa-road'></i>"
@@ -22,7 +22,7 @@
     weight = -70
 
 [[main]]
-    identifier = "Website"
+    identifier = "website"
     name = "Website"
     post = "<span class='alert'>New!</span>"
     pre = "<i class='fa fa-road'></i>"
