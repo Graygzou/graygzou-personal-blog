@@ -8,6 +8,12 @@
     width:47%
 }
 
+// About page
+.about-img {
+    float: left;
+    padding: 10px;
+}
+
 // Use for post page
 .classic-ul {
     list-style: none;
@@ -44,6 +50,11 @@
 
 blockquote {
     text-align: center;
+}
+
+.copyright-notice {
+    text-align: center;
+    margin: auto;
 }
 
 .seemore-link {
