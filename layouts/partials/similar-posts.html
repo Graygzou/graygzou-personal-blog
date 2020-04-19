@@ -25,4 +25,14 @@
         {{ range $elem_index, $elem_val := $t.Data.Terms.ByCount }}  
         {{ end }}
     </ul>
+
+    {{ $related := .Site.RegularPages.Related . | first 5 }}
+    {{ with $related }}
+    <h3>See Also</h3>
+    <ul>
+        {{ range . }}
+        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+        {{ end }}
+    </ul>
+    {{ end }}
   </nav>

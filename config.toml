@@ -1,6 +1,7 @@
 baseURL = ""
 languageCode = "en"
-title = "Grégoire Boiron"
+title = "Grégoire Boiron Blog"
+
 enableRobotsTXT=true
 googleAnalytics="UA-148345166-2"
 EnableMissingTranslationPlaceholders=true

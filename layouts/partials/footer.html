@@ -14,10 +14,13 @@
               {{ if $.Site.Params.email }}
               <li><a class="u-email" href="mailto:{{ $.Site.Params.email }}">{{ $.Site.Params.email }}</a></li>
               {{ end }}
+              {{ with .Site.Params.copyrighthtml }}
+              <li><span class="copyright-notice">{{ replace . "%%date%%" (now.Format "2006") | safeHTML }}</span></li>
+              {{ end }}
           </ul>
         </div>
         <div class="footer-col footer-col-3">
-          <p>{{ $.Site.Params.description }}</p>
+          <p>{{ $.Site.Params.extendedDescription | safeHTML }}</p>
         </div>
       </div>
     </div>

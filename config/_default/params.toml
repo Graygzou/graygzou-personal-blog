@@ -2,10 +2,13 @@ mainSections = ["posts"]
 blogSections = ["tutorials", "cheatsheets", "concepts", "tipsAndTricks"]
 author = "Grégoire Boiron"
 role = "Generalist Programmer"
+birthdayYear = 1994
 email = "gregoire.boiron@gmail.com"
-description = "Personal blog of the amazing Graygzou. Find tutorials, tips and tricks, and many more!"
+shortDescription = "Grégoire Boiron Personal Blog"
+extendedDescription = "Personal blog of the amazing Graygzou. Find tutorials, tips and tricks, and many more!"
 nbLatestPosts = 4
 menuIdNewPage = ["website"]
+copyrighthtml = "Copyright &#xA9; %%date%% Grégoire Boiron. All rights reserved."
   
 [social]
     [social.twitter]
