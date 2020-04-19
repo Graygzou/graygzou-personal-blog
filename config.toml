@@ -13,54 +13,6 @@ log=true
   priority = 0.5
   filename = "sitemap.xml"
 
-[params]
-  mainSections = ["posts"]
-  blogSections = ["tutorials", "cheatsheets", "concepts", "tipsAndTricks"]
-  author = "Grégoire Boiron"
-  role = "Generalist Programmer"
-  email = "gregoire.boiron@gmail.com"
-  description = "Personal blog of the amazing Graygzou. Find tutorials, tips and tricks, and many more!"
-  nbLatestPosts = 4
-  
-  [params.social]
-    [params.social.twitter]
-      name = "Twitter"
-      path = "https://twitter.com/GrayGzou"
-      order = 1
-    [params.social.github]
-      name = "Github"
-      path = "https://github.com/Graygzou"
-      order = 2
-    [params.social.linkedin]
-      name = "Linkedin"
-      path = "https://www.linkedin.com/in/gregoire-boiron/"
-      order = 3
-    [params.social.gamejolt]
-      name = "Gamejolt"
-      path = "https://gamejolt.com/@GrayGzou"
-      order = 4
-    [params.social.itch]
-      name = "Itch-dot-io"
-      path = "https://graygzou.itch.io/"
-      order = 5
-
-  [params.tagsCategory]
-    [params.tagsCategory.language]
-      title = "Languages"
-      color = "#78dce8"
-      tags = ["c#", "c++", "java", "lua", "js", "go", "ruby", "ada", "html", "css", "bash"]
-    [params.tagsCategory.engines]
-      title = "Engines"
-      color = "#ab9df2"
-      tags = ["unity", "unreal", "Jmonkey", "openGL", "webGL"]
-    [params.tagsCategory.techs]
-      title = "Tech"
-      color = "#ea9c77"
-      tags = ["docker", "raspberry-pi", "git", "branching", "hugo"]
-    [params.tagsCategory.concepts]
-      title = "Concepts"
-      color = "#fa2c71"
-      tags = ["web", "plugins"]
 
 [build]
   useResourceCacheWhen = "fallback"

@@ -22,7 +22,11 @@
                 {{ end }}
             </ul>
         {{ else }}-->
+        {{ if eq .Name "Website" }}
+            <a class="page-link" href="{{ .URL | absLangURL  }}" target="_blank">{{ .Pre }} {{ .Name }}</a>
+        {{ else }}
             <a class="page-link" href="{{ .URL | absLangURL  }}">{{ .Pre }} {{ .Name }}</a>
+        {{ end }}
         <!--{{ end }}-->
     {{ end }}
     </div>

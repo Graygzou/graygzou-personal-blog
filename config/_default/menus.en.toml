@@ -2,7 +2,7 @@
     identifier = "Home"
     name = "Home"
     pre = "<i class='fa fa-heart'></i>"
-    url = ""
+    url = "#"
     weight = -110
 
 [[main]]

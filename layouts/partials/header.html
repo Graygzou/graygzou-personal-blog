@@ -6,7 +6,7 @@
             <ul class="social-media-list">
             {{ range sort $.Site.Params.Social "order" }}
                 <li>
-                    <a href="{{ .Path }}" aria-label="{{ .Name }}">
+                    <a href="{{ .Path }}" aria-label="{{ .Name }}" target="_blank">
                         <svg class="svg-icon">
                             <use xlink:href="{{ print `svg/gamefolio-social-icons.svg` `#` (lower .Name) | relURL }}">
                             </use>

@@ -1,0 +1,47 @@
+mainSections = ["posts"]
+blogSections = ["tutorials", "cheatsheets", "concepts", "tipsAndTricks"]
+author = "Grégoire Boiron"
+role = "Generalist Programmer"
+email = "gregoire.boiron@gmail.com"
+description = "Personal blog of the amazing Graygzou. Find tutorials, tips and tricks, and many more!"
+nbLatestPosts = 4
+  
+[social]
+    [social.twitter]
+        name = "Twitter"
+        path = "https://twitter.com/GrayGzou"
+        order = 1
+    [social.github]
+        name = "Github"
+        path = "https://github.com/Graygzou"
+        order = 2
+    [social.linkedin]
+        name = "Linkedin"
+        path = "https://www.linkedin.com/in/gregoire-boiron/"
+        order = 3
+    [social.gamejolt]
+        name = "Gamejolt"
+        path = "https://gamejolt.com/@GrayGzou"
+        order = 4
+    [social.itch]
+        name = "Itch-dot-io"
+        path = "https://graygzou.itch.io/"
+        order = 5
+
+[tagsCategory]
+    [tagsCategory.language]
+      title = "Languages"
+      color = "#78dce8"
+      tags = ["c#", "c++", "java", "lua", "js", "go", "ruby", "ada", "html", "css", "bash"]
+    [tagsCategory.engines]
+      title = "Engines"
+      color = "#ab9df2"
+      tags = ["unity", "unreal", "Jmonkey", "openGL", "webGL"]
+    [tagsCategory.techs]
+      title = "Tech"
+      color = "#ea9c77"
+      tags = ["docker", "raspberry-pi", "git", "branching", "hugo"]
+    [tagsCategory.concepts]
+      title = "Concepts"
+      color = "#fa2c71"
+      tags = ["web", "plugins"]
