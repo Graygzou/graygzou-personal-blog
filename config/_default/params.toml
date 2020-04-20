@@ -9,7 +9,9 @@ extendedDescription = "Personal blog of the amazing Graygzou. Find tutorials, ti
 nbLatestPosts = 4
 menuIdNewPage = ["website"]
 copyrighthtml = "Copyright &#xA9; %%date%% Grégoire Boiron. All rights reserved."
-  
+
+participatedProjects = ["__Cuphead__: Don't Deal With The Devil", "__F1 Mobile Racing__"]
+
 [social]
     [social.twitter]
         name = "Twitter"

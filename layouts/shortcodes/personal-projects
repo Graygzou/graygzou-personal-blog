@@ -1,0 +1,3 @@
+{{ range .Site.Params.participatedProjects }}
+    {{ . | markdownify }},
+{{ end }}

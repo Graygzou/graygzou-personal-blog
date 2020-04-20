@@ -1,21 +1,18 @@
 ---
-title: "What it comes down to"
+title: "Meet the guy behind this blog"
 ---
 
-{{< figure src="/img/me.jpg" title="This is me! A bit grumpy maybe.." class="about-img" >}}
+{{< figure src="/img/me.jpg" title="This is me! I'm not always grumpy.." class="about-img" >}}
 
-I'm Greg, a {{< age-from-now >}} years old engineer.
-Computer science let you create what you want.
-Creations is limitless !
+I'm __Greg__, a {{< age-from-now >}} years old engineer specialized in video games development.   
+I had the chance to work, during my career, on several titles like {{< personal-projects >}} and some others unannonced titles.
 
+To be honest with you, I'm not that guy who starting programming when he was little. In fact, my "real" first programming experience was back in 2013, and I had 18 years old back then.
 
-To be honest, I'm not the guy that was passionnated since his young age about computer science at all. 
-My first contact with this wonderful world was back in 2013. I was 18 years old.
+But my __curiousity__ and my __hard working__ allows me to quickly catch up. And since then, I'm enjoying my journey, by learning new things everyday, in the wide world of computer science. 
 
-Since then, I followed my path guided by this thirst of learning new things in this wide field.
+Like Master Yi, a League of Legends Champion, summarize well:
 
-The desire of working in Video Games came as a surprised. I had a Nintendo 64 when I was little, played Pokemon Blue on GameBoy and also some Ubisoft title like Rayman. But I never expected to work on games at that time (because I didn't wanted to work at all maybe..)
+> A true master is an eternal student. 
 
-I had the chance to work on a wide variety on titles like Cuphead: Don't Deal With The Devil, F1 Mobile Racing and some others unannonced titles.
-
-Enjoy what live give you :tada:
+Keep on learning folks :book: :heart:
