@@ -1,5 +1,5 @@
 ---
-title: "Meet the guy behind this blog"
+title: "The guy behind this blog"
 ---
 
 {{< figure src="/img/me.jpg" title="This is me! I'm not always grumpy.." class="about-img" >}}
