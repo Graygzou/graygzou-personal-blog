@@ -1,5 +1,5 @@
 ---
-title: Index Cheatsheet
+title: Tutorials
 description: Comprehensive list of Hugo templating functions, including basic and advanced usage examples.
 godocref:
 date: 2017-02-01
