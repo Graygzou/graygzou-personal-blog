@@ -11,15 +11,17 @@
     </section>
     <section>
         <h2>Latest Articles</h2>
+        {{ $.Scratch.Set "total" 0 }}
         {{ $currentLang := .Site.Language.Lang }}
         {{ $posts := where (where .Site.AllPages "Type" "in" site.Params.mainSections) "IsNode" "==" false }}
         {{ $paginator := .Paginate (where $posts "Language.Lang" "=" $currentLang).ByDate.Reverse }}
         {{ range first .Site.Params.NbLatestPosts $paginator.Pages }}
+
             {{- partial "post-summary" (dict "context" . "fullcontent" false) -}}
 
-
+            <!-- Insert the separator if there is still one post to display -->
             {{ $index := $.Scratch.Get "total" }}
-            {{ if lt $index (sub .Site.Params.NbLatestPosts 1) }}
+            {{ if and (lt $index (sub .Site.Params.NbLatestPosts 1)) (lt $index (sub $paginator.TotalNumberOfElements 1)) }}
             <hr class="post-separator">
             {{ end }}
             {{ $.Scratch.Add "total" 1 }}
