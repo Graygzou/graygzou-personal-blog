@@ -13,8 +13,16 @@
         <h2>Latest Articles</h2>
         {{ $currentLang := .Site.Language.Lang }}
         {{ $posts := where (where .Site.AllPages "Type" "in" site.Params.mainSections) "IsNode" "==" false }}
-        {{ range first .Site.Params.NbLatestPosts (where $posts "Language.Lang" "=" $currentLang).ByDate.Reverse }}
+        {{ $paginator := .Paginate (where $posts "Language.Lang" "=" $currentLang).ByDate.Reverse }}
+        {{ range first .Site.Params.NbLatestPosts $paginator.Pages }}
             {{- partial "post-summary" (dict "context" . "fullcontent" false) -}}
+
+
+            {{ $index := $.Scratch.Get "total" }}
+            {{ if lt $index (sub .Site.Params.NbLatestPosts 1) }}
+            <hr class="post-separator">
+            {{ end }}
+            {{ $.Scratch.Add "total" 1 }}
         {{ end }}
     </section>
 {{ end }}

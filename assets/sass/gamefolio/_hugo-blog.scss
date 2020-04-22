@@ -25,6 +25,24 @@
     margin-right: 10px;
 }
 
+
+.post-summary {
+    margin-bottom: $spacing-unit;
+
+    h1 {
+        margin: auto;
+        font-size: 1.7em;
+    }
+
+    p {
+        margin: auto;
+    }
+
+    div {
+        margin: 5px 0;
+    }
+}
+
 .blog-post-title {
     margin: auto;
 }
@@ -36,7 +54,7 @@
 }
 
 .post-separator {
-    margin: 10 300;
+    margin: 10px 300px;
 }
 
 // End

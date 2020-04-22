@@ -38,7 +38,7 @@ participatedProjects = ["__Cuphead__: Don't Deal With The Devil", "__F1 Mobile R
     [tagsCategory.language]
       title = "Languages"
       color = "#78dce8"
-      tags = ["c#", "c++", "java", "lua", "js", "go", "ruby", "ada", "html", "css", "bash"]
+      tags = ["csharp", "c++", "java", "lua", "js", "go", "ruby", "ada", "html", "css", "bash"]
     [tagsCategory.engines]
       title = "Engines"
       color = "#ab9df2"

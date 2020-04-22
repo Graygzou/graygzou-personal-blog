@@ -6,7 +6,7 @@ enableRobotsTXT=true
 googleAnalytics="UA-148345166-2"
 EnableMissingTranslationPlaceholders=true
 disqusShortname = "graygzou-blog"
-summaryLength = 20
+summaryLength = 40
 enableEmoji = true
 log=true
 

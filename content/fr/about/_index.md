@@ -15,4 +15,4 @@ Comme le résumerait si bien Master Yi, un champion dans le jeu _League of Legen
 
 > Un vrai maître est un éternel étudiant. 
 
-Continuez à apprendre :book: :heart:
+Cultivez ce goût pour l'apprentissage :book: :heart:
