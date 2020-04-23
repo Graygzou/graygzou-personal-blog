@@ -120,11 +120,17 @@ blockquote {
 }
 
 .post-teaser {
-    padding: 5px 0;
+    padding: 10px 0;
     margin-bottom: auto;
 
+    h3 {
+        margin: auto;
+    }
+
     date {
-        border: 1px solid black;
+        float: left;
+        margin-top: 3px;
+        //border: 1px solid black;
         padding: 2px;
         border-radius: 6px;
         word-break: keep-all;

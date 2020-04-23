@@ -6,7 +6,7 @@
         {{ range .Pages }}
             {{ if or (eq ($.sectionname | string) (.Parent.Name | string)) (not $.sectionname) }}
                 <li class="post-teaser">
-                    <date datetime="{{ .Date.Format (i18n `postdateformat`) }}" class="post-published-date">
+                    <date datetime="{{ .Date.Format (i18n `postdateformat`) }}" class="tag">
                         {{ .Date.Format (i18n "postdateformat") }}
                     </date>
                     <a href="{{ .RelPermalink }}">

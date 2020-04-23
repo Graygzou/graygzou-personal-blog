@@ -7,6 +7,7 @@ email = "gregoire.boiron@gmail.com"
 shortDescription = "Grégoire Boiron Personal Blog"
 extendedDescription = "Personal blog of the amazing Graygzou. Find tutorials, tips and tricks, and many more!"
 nbLatestPosts = 4
+nbPostSectionPreview = 3
 menuIdNewPage = ["website"]
 copyrighthtml = "Copyright &#xA9; %%date%% Grégoire Boiron. All rights reserved."
 

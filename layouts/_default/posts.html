@@ -24,12 +24,13 @@
 
                 <!-- List all the newest posts. Others will be available thanks to the archive button -->
                 <ul class="classic-ul">
-                {{ range first 4 (where $pages "Parent.Name" "eq" ($sectionname | string)) }}
+                {{ range first $.Site.Params.nbPostSectionPreview (where $pages "Parent.Name" "eq" ($sectionname | string)) }}
                   <li class="post-teaser">
-                      <date datetime="{{ .Date.Format (i18n `postdateformat`) }}" class="post-published-date">
-                          {{ .Date.Format (i18n "postdateformat") }}
-                      </date>
-                      <a href="{{ .RelPermalink }}" class="blog-post-title">{{ .Title }}</a>
+                    <date datetime="{{ .Date.Format (i18n `postdateformat`) }}" class="tag">
+                        {{ .Date.Format (i18n "postdateformat") }}
+                    </date> 
+                    <h3><a href="{{ .RelPermalink }}" class="blog-post-title">{{ .Title | truncate 35 }}</a></h3>
+                    {{ .Summary | truncate 110 }}
                   </li>
                 {{ end }} <!-- Loop over blog posts -->
                 </ul>
