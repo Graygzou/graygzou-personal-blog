@@ -15,7 +15,6 @@ log=true
   priority = 0.5
   filename = "sitemap.xml"
 
-
 [build]
   useResourceCacheWhen = "fallback"
   writeStats = false

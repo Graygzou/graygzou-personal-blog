@@ -1,0 +1,8 @@
+# js
+[js.viz]
+  sri = "" # no sri
+  url = "https://cdn.jsdelivr.net/npm/viz.js@2.1.2/viz.min.js"
+
+[js.viz_render]
+  sri = "sha256-Ogqs510LFnekr9o7OLdpelaaAmNss9egQRTyzCqV2NQ="
+  url = "https://cdn.jsdelivr.net/npm/viz.js@2.1.2/full.render.js"

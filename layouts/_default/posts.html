@@ -32,6 +32,7 @@
                     <h3><a href="{{ .RelPermalink }}" class="blog-post-title">{{ .Title | truncate 35 }}</a></h3>
                     {{ .Summary | truncate 110 }}
                   </li>
+                  <div style="text-align: center;">{{ .Parent.Params.emoji | emojify }}{{ .Parent.Params.emoji | emojify }}{{ .Parent.Params.emoji | emojify }}</div>
                 {{ end }} <!-- Loop over blog posts -->
                 </ul>
 
