@@ -9,6 +9,8 @@
     <img src="" style="float: left; max-width: 50px; max-height: 50px;"/>-->
     
     <h1>
+        {{/* partial (string .context.Params.sectionImg) (dict "className" "section-thumbnail-img" "fill" "#01589B" "width" 10 "height" 20 ) */}}
+        {{- .context.Params.emoji | emojify -}}
         <a href="{{ .context.RelPermalink }}">
         {{- if eq .context.Section "functions" -}}
         {{ .context.LinkTitle }}
@@ -18,7 +20,7 @@
         </a>
     </h1>
 
-    {{ partial (string .context.Params.sectionImg) (dict "className" "section-thumbnail-img" "fill" "#01589B" "width" 10 "height" 20 ) }}
+    
     
     <div class="blog-section-description">
         {{ if .context.Params.description  }}
