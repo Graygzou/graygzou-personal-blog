@@ -5,6 +5,8 @@
 {{ define "main" }}
     {{ partial "similar-posts.html" . }}
 
+    {{ .TableOfContents }}
+
     {{ .Content }}
 
     {{ partial "single-navigation.html" . }}
