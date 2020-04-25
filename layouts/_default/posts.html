@@ -45,15 +45,8 @@
                 <!-- Archive button -->
                 <a href="{{ .RelPermalink }}">Archives &raquo;</a>
               </div>
-              {{ $nbSections := $.Scratch.Get "sections" }}
-              {{ $index := $.Scratch.Get "total" }}
-              {{ if and (eq (mod (add (int $nbSections) 1) 2) 0) (lt $index (sub $paginator.NumberOfElements 1)) }}
-                <hr class="post-separator">
-              {{ end }}
-              {{ $.Scratch.Add "sections" 1 }}
             {{- end -}} <!-- if NumberOfElements > 0 -->
           {{- end -}} <!-- if section in Params.blogSections -->
-          {{ $.Scratch.Add "total" 1 }}
       {{ end }}
   </section>
 
