@@ -1,8 +1,9 @@
 ---
-title: "Graygzou Blog"
-featured_image: '/images/gohugo-default-sample-hero-image.jpg'
-description: "No description needed ?"
+title: "Bienvenue"
 ---
-Bienvenue sur mon super blog. 
 
-Toujours en progrès cela dit.
+Le but de ce blog est de partager ma connaissance mais aussi partager mes découvertes sur différents sujets en rapport avec l'informatique.
+
+Les sujets abordés peuvent être divers et variés. Ils risquent d'être orientés sur mes "side-projets" actuels. Et ils peuvent vite changer..
+
+Je reste joinable différents réseaux sociaux.

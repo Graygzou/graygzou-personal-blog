@@ -24,9 +24,9 @@
     
     <div class="blog-section-description">
         {{ if .context.Params.description  }}
-            {{ .context.Params.description | markdownify }}
+            {{- .context.Params.description | markdownify -}}
         {{ else }}
-            {{ .context.Summary  }}
+            {{- .context.Content -}}
         {{ end }}
     </div>
 </div>

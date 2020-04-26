@@ -1,14 +1,8 @@
 ---
-title: TipsAndTricks
-description: Comprehensive list of Hugo templating functions, including basic and advanced usage examples.
-godocref:
-date: 2017-02-01
-publishdate: 2017-02-01
-lastmod: 2017-02-01
-keywords: []
-weight: 01	#rem
-draft: false
+title: Tips n Tricks
+emoji: ":bulb:"
+weight: 04
 aliases: [/layout/functions/, /templates/functions]
-----
+---
 
-tototo
+Avez-vous déjà appris quelque chose et dit: "Cela va me sauver des heures de souffrances ?" Cette section est faire pour vous!

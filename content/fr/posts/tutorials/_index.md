@@ -1,14 +1,8 @@
 ---
-title: Tutorials
-description: Comprehensive list of Hugo templating functions, including basic and advanced usage examples.
-godocref:
-date: 2017-02-01
-publishdate: 2017-02-01
-lastmod: 2017-02-01
-keywords: []
-weight: 01	#rem
-draft: false
-aliases: [/layout/functions/, /templates/functions]
-----
+title: Tutoriaux
+weight: 01
+emoji: ":blue_book:"
+aliases: [/fr/tutorials/, /tutoriels]
+---
 
-tototo
+Qui n'a jamais rêvé de créer un MMORPG en 5 minutes? Ou même devenir un pro sur Unity3D sans ouvrir l'editeur ? Cette section est ou tout cela arrive !

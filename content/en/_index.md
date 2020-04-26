@@ -1,7 +1,5 @@
 ---
 title: "Welcome"
-type: Posts
-description: "No description needed ?"
 ---
 
 The purpose of this blog is to share my knownledge but also share my struggle as I go throught differents topics in my computer science engineer's life.
