@@ -1,2 +1,14 @@
 [postdateformat]
 other = "02/01/2006"
+
+[yourName]
+other = "Nom Prénom"
+
+[emailAddress]
+other = "Adresse Mail"
+
+[message]
+other = "Message"
+
+[send]
+other = "Envoyer"

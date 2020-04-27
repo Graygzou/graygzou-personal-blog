@@ -5,6 +5,7 @@ role = "Generalist Programmer"
 birthdayYear = 1994
 email = "gregoire.boiron@gmail.com"
 shortDescription = "Grégoire Boiron Personal Blog"
+formspreeEndpoint = "https://formspree.io/xwkrekv"
 extendedDescription = "Personal blog of the amazing Graygzou. Find tutorials, tips and tricks, and many more!"
 nbLatestPosts = 4
 nbPostSectionPreview = 3

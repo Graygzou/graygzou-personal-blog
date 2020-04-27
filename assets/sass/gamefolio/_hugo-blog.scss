@@ -64,8 +64,38 @@
     float: left;
     padding: 0 10px;
 }
-
 // End
+
+.about-form {
+    text-align: left;
+    display: inline-block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+    fieldset {
+        text-align: left;
+        border: none;
+        padding: 10px 0px;
+        
+        input, label, textarea {
+            font-family: inherit;
+            display: inline-block;
+            padding: 0.75em 1em;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        label {
+            padding: 0.75em 0em;
+        }
+    }
+}
+
+.contact-button {
+    margin: auto;
+    padding: 1em 5em;
+}
 
 .project-img {
     float: left;
