@@ -5,6 +5,9 @@
 {{ define "main" }}
     {{ partial "similar-posts.html" . }}
 
+    <h1 class="post-title">{{ .Title }}</h1>
+    {{ partial "post-info.html" . }}
+
     {{ .TableOfContents }}
 
     {{ .Content }}

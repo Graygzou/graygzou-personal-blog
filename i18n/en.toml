@@ -12,3 +12,9 @@ other = "Message"
 
 [send]
 other = "Send"
+
+[reading-time]
+other = "min read"
+
+[single-dateformat]
+other = "Jan 2 2006"

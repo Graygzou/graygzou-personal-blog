@@ -1,12 +1,12 @@
 ---
-Title: "Git Cheat Sheet"
+Title: "Raspberry Pi infos"
 Description: TODO
 date: 2020-04-11T18:26:10+02:00
 tags: ["raspberry-pi", "troubleshootings"]
 draft: true
 ---
 
-# Raspberry Pi infos
+# 
 
 ## Having troubles with your tv screen ?
 1) Run the following commands to know what's going on with your screen and the raspberry pi

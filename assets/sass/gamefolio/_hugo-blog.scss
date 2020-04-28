@@ -190,6 +190,13 @@ blockquote {
     float: right;
 }
 
+.related-post {
+    float: right;
+    width: 30%;
+    padding: 10px;
+    border: 1px solid black;
+}
+
 .tag-nav {
     float: right;
     width: 20%;
@@ -225,4 +232,19 @@ blockquote {
 
 .single-pagination-right {
     float: right;
+}
+
+.post-title {
+    margin-bottom: 10px;
+}
+
+// Single Post CSS
+.info-tags {
+    display: inline-block;
+    margin: 0;
+    list-style: none;
+
+    li {
+        display: inline;  
+    }
 }
