@@ -26,38 +26,37 @@
   </div>
 </footer>
 
-
+{{ if in .Params.Libraries "viz" }}
   {{ $js := .Site.Data.lib.js }}
-  {{ if in .Params.Libraries "viz" }}
-    <script src="{{ $js.viz.url }}" crossorigin="anonymous"></script>
-    <script src="{{ $js.viz_render.url }}" integrity="{{ $js.viz_render.sri }}" crossorigin="anonymous"></script>
-  {{ end }}
+  <script src="{{ $js.viz.url }}" crossorigin="anonymous"></script>
+  <script src="{{ $js.viz_render.url }}" integrity="{{ $js.viz_render.sri }}" crossorigin="anonymous"></script>
+{{ end }}
 
-  <script>
-    'use strict';
-    {{ $lib := .Params.libraries }}
-    var lib = JSON.parse({{ $lib | jsonify }});
+<script>
+  'use strict';
+  {{ $lib := .Params.libraries }}
+  var lib = JSON.parse({{ $lib | jsonify }});
 
-  // ========================== viz diagram ==========================
-  if (lib && lib.includes('viz')) {
-    var vizPrefix = "language-viz-";
-    Array.prototype.forEach.call(document.querySelectorAll("[class^=" + vizPrefix + "]"), function (x) {
-      x.style.display = 'none'
-      x.parentNode.style.backgroundColor = "transparent"
-      var engine;
-      x.getAttribute("class").split(" ").forEach(function (cls) {
-        if (cls.startsWith(vizPrefix)) {
-          engine = cls.substr(vizPrefix.length);
-        }
-      });
-      var viz = new Viz();
-      viz.renderSVGElement(x.innerText, { engine: engine })
-        .then(function (element) {
-          element.style.width = "100%";
-          x.parentNode.insertBefore(element, x);
-        })
+// ========================== viz diagram ==========================
+if (lib && lib.includes('viz')) {
+  var vizPrefix = "language-viz-";
+  Array.prototype.forEach.call(document.querySelectorAll("[class^=" + vizPrefix + "]"), function (x) {
+    x.style.display = 'none'
+    x.parentNode.style.backgroundColor = "transparent"
+    var engine;
+    x.getAttribute("class").split(" ").forEach(function (cls) {
+      if (cls.startsWith(vizPrefix)) {
+        engine = cls.substr(vizPrefix.length);
+      }
     });
-  }
-  // =================================================================
-  </script>
+    var viz = new Viz();
+    viz.renderSVGElement(x.innerText, { engine: engine })
+      .then(function (element) {
+        element.style.width = "100%";
+        x.parentNode.insertBefore(element, x);
+      })
+  });
+}
+// =================================================================
+</script>
   
