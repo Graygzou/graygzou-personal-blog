@@ -238,6 +238,18 @@ blockquote {
 // Single Post CSS
 #TableOfContents {
     float: right;
+    position: sticky;
+    top: 20px;
+
+    ul {
+        margin-bottom: 0;
+    }
+
+    @include media-query($on-palm) {
+        float: none;
+        position: inherit;
+        margin-top: $spacing-unit;
+    }
 }
 
 .info-tags {

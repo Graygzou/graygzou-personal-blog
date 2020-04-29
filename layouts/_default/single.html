@@ -7,11 +7,13 @@
     <h1 class="post-title">{{ .Title }}</h1>
     {{ partial "post-info.html" . }}
 
-    {{ .TableOfContents }}
+    <section>
+        {{ .TableOfContents }}
 
-    <div class="blog-content">
-        {{ .Content }}
-    </div>
+        <div class="blog-content">
+            {{ .Content }}
+        </div>
+    </section>
     
     {{ partial "similar-posts.html" . }}
 
