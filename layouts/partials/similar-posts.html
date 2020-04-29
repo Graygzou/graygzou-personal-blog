@@ -1,4 +1,4 @@
-<nav class="related-post">
+<nav>
     <!-- Display similar posts -->
     {{ $related := .Site.RegularPages.Related . | first 5 }}
     {{ with $related }}

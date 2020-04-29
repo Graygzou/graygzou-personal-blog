@@ -177,6 +177,10 @@ blockquote {
     }
 }
 
+.blog-content {
+    overflow: auto;
+}
+
 // Tag sections
 .project-tags {
     margin: auto;
@@ -188,13 +192,6 @@ blockquote {
     display: inline;
     padding: 0 10px;
     float: right;
-}
-
-.related-post {
-    float: right;
-    width: 30%;
-    padding: 10px;
-    border: 1px solid black;
 }
 
 .tag-nav {
@@ -239,6 +236,10 @@ blockquote {
 }
 
 // Single Post CSS
+#TableOfContents {
+    float: right;
+}
+
 .info-tags {
     display: inline-block;
     margin: 0;

@@ -3,14 +3,17 @@
 {{ end }}
 
 {{ define "main" }}
-    {{ partial "similar-posts.html" . }}
 
     <h1 class="post-title">{{ .Title }}</h1>
     {{ partial "post-info.html" . }}
 
     {{ .TableOfContents }}
 
-    {{ .Content }}
+    <div class="blog-content">
+        {{ .Content }}
+    </div>
+    
+    {{ partial "similar-posts.html" . }}
 
     {{ partial "single-navigation.html" . }}
 
