@@ -177,7 +177,7 @@ blockquote {
     }
 }
 
-.blog-content {
+.left-content-overflow {
     overflow: auto;
 }
 
@@ -198,6 +198,8 @@ blockquote {
     float: right;
     width: 20%;
     margin-left: $spacing-unit;
+    position: sticky;
+    top: $spacing-unit;
 
     h3 {
         margin: auto;
@@ -239,7 +241,7 @@ blockquote {
 #TableOfContents {
     float: right;
     position: sticky;
-    top: 20px;
+    top: $spacing-unit;
 
     ul {
         margin-bottom: 0;
