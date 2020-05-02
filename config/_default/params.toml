@@ -4,7 +4,7 @@ birthdayYear = 1994
 email = "gregoire.boiron@gmail.com"
 description = "Grégoire Boiron Personal Blog"
 extendedDescription = "Personal blog of the amazing Graygzou. Find tutorials, tips and tricks, and many more!"
-images = ["me.jpg"]
+images = ["/img/me.jpg"]
 formspreeEndpoint = "https://formspree.io/xwkrekv"
 
 nbLatestPosts = 4
