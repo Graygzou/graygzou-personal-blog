@@ -1,15 +1,5 @@
 <div>
-    <!--
-    {{/* if eq .context.Section "news" */}}
-        <date class="f6 db" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
-        {{/* .context.Date.Format "January 2, 2006" */}}
-        </date>
-    {{/* end */}}
-
-    <img src="" style="float: left; max-width: 50px; max-height: 50px;"/>-->
-    
     <h1>
-        {{/* partial (string .context.Params.sectionImg) (dict "className" "section-thumbnail-img" "fill" "#01589B" "width" 10 "height" 20 ) */}}
         {{- .context.Params.emoji | emojify -}}
         <a href="{{ .context.RelPermalink }}">
         {{- if eq .context.Section "functions" -}}
@@ -19,14 +9,12 @@
         {{- end -}}
         </a>
     </h1>
-
-    
     
     <div class="blog-section-description">
         {{ if .context.Params.description  }}
             {{- .context.Params.description | markdownify -}}
         {{ else }}
-            {{- .context.Content -}}
+            {{- .context.RawContent -}}
         {{ end }}
     </div>
 </div>

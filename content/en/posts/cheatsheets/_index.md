@@ -5,4 +5,4 @@ weight: 03
 aliases: [/cheatsheet/,/cheatsheets/]
 ---
 
-Simple - One topic - One bullet lists - Easy to remember sheet and ready to download / pimp as you wish!
+One topic, One bullet lists, One easy layout. The goal is to have an easy to remember sheet and ready to download / pimp as you wish!

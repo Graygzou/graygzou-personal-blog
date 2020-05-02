@@ -6,4 +6,4 @@ emoji: ":bulb:"
 aliases: [/tips&tricks/,/tipsandtricks]
 ---
 
-Never learn something and say: "This will save me countless hours of pain?" Join! There will no doubt be surprises!
+Did you ever say to yourself when learning something: "This will save me countless hours of pain?" Well, join! There might be some surprises in there!
