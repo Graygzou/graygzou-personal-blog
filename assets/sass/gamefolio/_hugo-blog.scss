@@ -238,10 +238,15 @@ blockquote {
 }
 
 // Single Post CSS
-#TableOfContents {
+.TableOfContents {
     float: right;
     position: sticky;
     top: $spacing-unit;
+    padding-left: 10px;
+
+    h3 {
+        margin: 0;
+    }
 
     ul {
         margin-bottom: 0;

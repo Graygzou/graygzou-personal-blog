@@ -1,5 +1,5 @@
 {{ define "breadcrumb" }}
-    {{ partial "single-navigation.html" . }}
+    {{ partial "breadcrumb" . }}
 {{ end }}
 
 {{ define "main" }}
@@ -8,8 +8,10 @@
     {{ partial "post-info.html" . }}
 
     <section>
-        {{ .TableOfContents }}
-
+        <div class="TableOfContents">
+            <h3>{{ i18n "table-of-content" }}</h3>
+            {{ .TableOfContents }}
+        </div>
         <div class="left-content-overflow">
             {{ .Content }}
         </div>

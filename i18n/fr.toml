@@ -12,3 +12,12 @@ other = "Message"
 
 [send]
 other = "Envoyer"
+
+[reading-time]
+other = "min lecture"
+
+[single-dateformat]
+other = "02/01/2006"
+
+[table-of-content]
+other = "Sommaire"
