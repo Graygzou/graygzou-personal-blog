@@ -237,19 +237,28 @@ blockquote {
     margin-bottom: 10px;
 }
 
+.blog-post-header {
+    margin-bottom: $spacing-unit;
+}
+
 // Single Post CSS
 .TableOfContents {
     float: right;
     position: sticky;
     top: $spacing-unit;
-    padding-left: 10px;
+    padding-left: $spacing-unit;
 
     h3 {
         margin: 0;
     }
 
     ul {
+        list-style: none;
+    }
+
+    ul:first-child {
         margin-bottom: 0;
+        margin-left: 0;
     }
 
     @include media-query($on-palm) {

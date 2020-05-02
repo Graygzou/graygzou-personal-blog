@@ -1,17 +1,18 @@
-mainSections = ["posts"]
-blogSections = ["tutorials", "cheatsheets", "concepts", "tipsAndTricks"]
 author = "Grégoire Boiron"
 role = "Generalist Programmer"
 birthdayYear = 1994
 email = "gregoire.boiron@gmail.com"
-shortDescription = "Grégoire Boiron Personal Blog"
-formspreeEndpoint = "https://formspree.io/xwkrekv"
+description = "Grégoire Boiron Personal Blog"
 extendedDescription = "Personal blog of the amazing Graygzou. Find tutorials, tips and tricks, and many more!"
+images = ["me.jpg"]
+formspreeEndpoint = "https://formspree.io/xwkrekv"
+
 nbLatestPosts = 4
 nbPostSectionPreview = 3
+mainSections = ["posts"]
 menuIdNewPage = ["website"]
+blogSections = ["tutorials", "cheatsheets", "concepts", "tipsAndTricks"]
 copyrighthtml = "Copyright &#xA9; %%date%% Grégoire Boiron. All rights reserved."
-
 participatedProjects = ["__Cuphead__: Don't Deal With The Devil", "__F1 Mobile Racing__"]
 
 [social]

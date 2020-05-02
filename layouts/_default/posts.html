@@ -33,7 +33,11 @@
                         {{ .Date.Format (i18n "postdateformat") }}
                     </date> 
                     <h3><a href="{{ .RelPermalink }}" class="blog-post-title">{{ .Title | truncate 35 }}</a></h3>
-                    {{ .Summary | truncate 110 }}
+                    {{ if .Params.description  }}
+                        {{- .Params.description | markdownify | truncate 110 -}}
+                    {{ else }}
+                        {{- .Summary | truncate 110 -}}
+                    {{ end }}
                   </li>
                   {{ if and (lt $index (sub $.Site.Params.nbPostSectionPreview 1)) (lt $index (sub $postsPaginator.NumberOfElements 1)) }}
                     <div style="text-align: center;">- - -</div>

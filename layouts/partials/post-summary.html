@@ -3,7 +3,9 @@
     <date datetime="{{ .context.Date.Format (i18n `postdateformat`) }}">
         {{ .context.Date.Format (i18n "postdateformat") }}
     </date>
+
     <p>{{ .context.Summary }}</p>
+
     <div>
         {{- range ( .context.GetTerms "tags")  -}}
             <span class="tag"><a href="{{ .Permalink }}">#{{ .LinkTitle }}</a></span>

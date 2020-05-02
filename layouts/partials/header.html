@@ -2,7 +2,7 @@
     <div class="wrapper">
         <div class="profil-header">
             <a class="site-title" rel="author" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
-            <p class="profil-description">{{ .Site.Params.shortDescription | safeHTML }}</p>
+            <p class="profil-description">{{ .Site.Params.description | safeHTML }}</p>
             <ul class="social-media-list">
             {{ range sort $.Site.Params.Social "order" }}
                 <li>

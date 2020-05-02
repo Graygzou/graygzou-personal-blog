@@ -8,9 +8,6 @@
     {{ with .Params.Author }}
     &nbsp;&middot;&nbsp; <span title="{{ i18n "single-writtenBy" }}">{{if $params.AuthorEmoji }}{{ $params.AuthorEmoji }}{{ else }}✍️{{ end }}&nbsp;{{ . }}</span>
     {{ end }}
-    <span>
-    {{ if (and .Site.Params.enableBusuanzi .Site.Params.busuanziPagePV) }} &middot; 👀<span id="busuanzi_value_page_pv">...</span> {{ i18n "counter-page-pv" }}{{ end }}
-    </span>
     {{ $taxo := "tags" }}
     <ul class="info-tags">
         {{ if .Params.tags }}
