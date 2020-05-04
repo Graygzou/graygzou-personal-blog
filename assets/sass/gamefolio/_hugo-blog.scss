@@ -2,10 +2,15 @@
 .finding {
     float: right;
     width: 50%;
+    padding-left: $spacing-unit;
+}
+
+.hot-finding-body {
+    overflow: hidden;
     padding-left: 10px;
 }
-.intro > h2 {
-    width:47%
+.intro {
+    overflow: auto;
 }
 
 // About page

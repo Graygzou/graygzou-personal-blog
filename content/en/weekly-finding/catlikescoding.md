@@ -1,8 +1,8 @@
 ---
 Title: "Cat like coding"
-description: "Nice blog about Unity tutorials."
+description: 
 tags: ["tutorials", "plugins"]
-thumbnail: svg/others/catlike-coding-logo.svg
+thumbnail: img/hotfinding/catlike-coding-logo.svg
 date: 2020-04-06T19:37:37+01:00
 ---
 

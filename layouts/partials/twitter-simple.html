@@ -1,0 +1,3 @@
+{{- $url := printf "https://api.twitter.com/1/statuses/oembed.json?id=%v&dnt=%t" .id true -}}
+{{- $json := getJSON $url -}}
+{{ $json.html | safeHTML }}

@@ -1,30 +1,18 @@
 {{ define "main" }}
-    <section class="intro">
-        <div class="finding">
-            <h2>Hot finding</h2>
-            {{- partial "weekly-finding" (dict "context" . ) -}}
-        </div>
-        <div class="intro">
-            <h2>{{ .Title }}</h2>
-            {{ .Content }}
-        </div>
+<section>
+    <section class="finding">
+        {{- partial "weekly-finding" (dict "context" . ) -}}
     </section>
-    <section>
-        <h2>Latest Articles</h2>
-        {{ $.Scratch.Set "total" 0 }}
-        {{ $currentLang := .Site.Language.Lang }}
-        {{ $posts := where (where .Site.AllPages "Type" "in" site.Params.mainSections) "IsNode" "==" false }}
-        {{ $paginator := .Paginate (where $posts "Language.Lang" "=" $currentLang).ByDate.Reverse }}
-        {{ range first .Site.Params.NbLatestPosts $paginator.Pages }}
 
-            {{- partial "post-summary" (dict "context" . "fullcontent" false) -}}
+    <h2>{{ .Title }}</h2>
+    {{ .Content }}
 
-            <!-- Insert the separator if there is still one post to display -->
-            {{ $index := $.Scratch.Get "total" }}
-            {{ if and (lt $index (sub .Site.Params.NbLatestPosts 1)) (lt $index (sub $paginator.TotalNumberOfElements 1)) }}
-            <hr class="post-separator">
-            {{ end }}
-            {{ $.Scratch.Add "total" 1 }}
-        {{ end }}
-    </section>
+    <h2>Latest Articles</h2>
+    {{ $currentLang := .Site.Language.Lang }}
+    {{ $posts := where (where .Site.AllPages "Type" "in" site.Params.mainSections) "IsNode" "==" false }}
+    {{ $paginator := .Paginate (where $posts "Language.Lang" "=" $currentLang).ByDate.Reverse }}
+    {{ range first .Site.Params.NbLatestPosts $paginator.Pages }}
+        {{- partial "post-summary" (dict "context" . "fullcontent" false) -}}
+    {{ end }}
+</section>
 {{ end }}

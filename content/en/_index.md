@@ -2,8 +2,8 @@
 title: "Welcome"
 ---
 
-The purpose of this blog is to share my knownledge but also share my struggle as I go throught differents topics in my computer science engineer's life.
+The purpose of this blog is to share my knowledge but also share my struggle as I go through different topics in my computer science engineers life.
 
-Topics are "vaste" and broad. My focus will vary depends on my current side projects. And those can shift pretty quickly..
+Topics are "vast" and broad. My focus will vary depending on my current side projects. And those can shift pretty quickly..
 
 Feel free to reach me on usual social networks.
