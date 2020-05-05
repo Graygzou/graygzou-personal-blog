@@ -54,3 +54,11 @@ participatedProjects = ["__Cuphead__: Don't Deal With The Devil", "__F1 Mobile R
       title = "Concepts"
       color = "#fa2c71"
       tags = ["web", "plugins"]
+
+[shareon]
+  [shareon.facebook]
+    name = "Facebook"
+    username = ""
+  [shareon.Twitter]
+    name = "Twitter"
+    username = "GrayGzou"
