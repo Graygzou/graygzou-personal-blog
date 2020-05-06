@@ -17,8 +17,10 @@
     <meta property="og:url" content="{{ .Permalink | absLangURL }}">
     <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
     <meta property="og:description" content="{{ $.Param "description" }}">
-    <meta property="og:image" content="{{ $.Param "images" | absURL }}">
-    <meta property="og:image:url" content="{{ $.Param "images" | absURL }}">
+    {{ with .Params.image }}
+      <meta property="og:image" content="{{ . | absURL }}">
+      <meta property="og:image:url" content="{{ . | absURL }}">
+    {{ end }}
 
     {{ template "_internal/twitter_cards.html" . }}
 
