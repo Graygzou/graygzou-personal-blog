@@ -62,3 +62,6 @@ participatedProjects = ["__Cuphead__: Don't Deal With The Devil", "__F1 Mobile R
   [shareon.Twitter]
     name = "Twitter"
     username = "GrayGzou"
+  [shareon.Linkedin]
+    name = "Linkedin"
+    username = "Grégoire Boiron"
