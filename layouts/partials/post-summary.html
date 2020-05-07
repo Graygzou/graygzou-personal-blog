@@ -6,11 +6,15 @@
 
     <p>{{ .context.Summary }}</p>
 
-    <div>
+    {{ if gt (len (.context.GetTerms "tags")) 1 }}
+    <div class="info-tags">
         <span>Tags: </span>
         {{- range ( .context.GetTerms "tags")  -}}
             <span class="tag"><a href="{{ .Permalink }}">#{{ .LinkTitle }}</a></span>
         {{- end -}}
     </div>
-    {{ partial "share" (dict "context" .context "params" .context.Params) }}
+    {{ end }}
+    <div class="share-links">
+        {{ partial "share" (dict "context" .context "params" .context.Params) }}
+    </div>
 </div>

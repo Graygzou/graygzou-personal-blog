@@ -18,10 +18,12 @@
             {{ .Content }}
         </div>
     </section>
-    
+
+    <div class="center">
+        {{ partial "share" (dict "context" . "params" .Params) }}
+    </div>
+
     {{ partial "similar-posts.html" . }}
-
     {{ partial "single-navigation.html" . }}
-
     {{ template "_internal/disqus.html" . }}
 {{ end }}

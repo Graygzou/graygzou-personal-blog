@@ -30,6 +30,26 @@
     margin-right: 10px;
 }
 
+.info-tags {
+    display: inline-block;
+    list-style: none;
+
+    li {
+        display: inline;  
+    }
+}
+
+.share-links {
+    float: right;
+
+    div {
+        display: inline-block;
+    }
+
+    .share-message {
+        vertical-align: middle;
+    }
+}
 
 .post-summary {
     margin-bottom: $spacing-unit;
@@ -41,10 +61,6 @@
 
     p {
         margin: auto;
-    }
-
-    div {
-        margin: 5px 0;
     }
 }
 
@@ -273,12 +289,6 @@ blockquote {
     }
 }
 
-.info-tags {
-    display: inline-block;
-    margin: 0;
-    list-style: none;
-
-    li {
-        display: inline;  
-    }
+.center {
+    text-align: center;
 }
