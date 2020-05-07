@@ -3,6 +3,13 @@
     float: right;
     width: 50%;
     padding-left: $spacing-unit;
+
+    @include media-query($on-palm) {
+        float: none;
+        position: inherit;
+        width: 100%;
+        padding-left: 0px;
+    }
 }
 
 .hot-finding-body {

@@ -1,18 +1,23 @@
 {{ define "main" }}
 <section>
+    <section>
+        <h2>{{ .Title }}</h2>
+        {{ .Content }}
+    </section>
+
     <section class="finding">
         {{- partial "weekly-finding" (dict "context" . ) -}}
     </section>
 
-    <h2>{{ .Title }}</h2>
-    {{ .Content }}
+    <section>
+        <h2>Latest Articles</h2>
+        {{ $currentLang := .Site.Language.Lang }}
+        {{ $posts := where (where .Site.AllPages "Type" "in" site.Params.mainSections) "IsNode" "==" false }}
+        {{ $paginator := .Paginate (where $posts "Language.Lang" "=" $currentLang).ByDate.Reverse }}
+        {{ range first .Site.Params.NbLatestPosts $paginator.Pages }}
+            {{- partial "post-summary" (dict "context" . "fullcontent" false) -}}
+        {{ end }}
+    </section>
 
-    <h2>Latest Articles</h2>
-    {{ $currentLang := .Site.Language.Lang }}
-    {{ $posts := where (where .Site.AllPages "Type" "in" site.Params.mainSections) "IsNode" "==" false }}
-    {{ $paginator := .Paginate (where $posts "Language.Lang" "=" $currentLang).ByDate.Reverse }}
-    {{ range first .Site.Params.NbLatestPosts $paginator.Pages }}
-        {{- partial "post-summary" (dict "context" . "fullcontent" false) -}}
-    {{ end }}
 </section>
 {{ end }}
