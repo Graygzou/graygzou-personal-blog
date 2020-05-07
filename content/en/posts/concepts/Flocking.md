@@ -1,7 +1,7 @@
 ---
 title: "Flocking"
 description: "Let's see together the principle of Flocking or as I call it: how to move a group of agents together."
-image: "me.jpg"
+image: "img/me.jpg"
 date: 2020-05-02T12:02:42+02:00
 ---
 
