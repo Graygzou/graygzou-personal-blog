@@ -11,15 +11,22 @@
     instaid = "BWNjjyYFxVx"
 
 [test-youtube]
-    order = 3
+    order = 11
     title = "Test youtube"
     description = "Nice blog about Unity tutorials."
+    summary = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
     youtubeid = "ORAGPZGMJg4"
 
 [cats-like-coding]
-    order = 4
+    order = 10
     title = "Cat like coding"
     description = "Nice blog about Unity tutorials."
     summary = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
     thumbnail = "img/hotfinding/catlike-coding-logo.svg"
     url = "https://catlikecoding.com/"
+
+[riot-tech-blog]
+    order = 8
+    title = "Riot Tech Blog"
+    description = "Riot official tech blog"
+    tweetid = 1245031803431206912
