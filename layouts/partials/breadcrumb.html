@@ -5,13 +5,17 @@
 {{ define "breadcrumbnav" }}
     {{ if .p1.Parent }}
         {{ template "breadcrumbnav" (dict "p1" .p1.Parent "p2" .p2 )  }}
-        <li>&gt;</li>
+        {{ if not (eq (.p1.Kind) "taxonomyTerm") }}
+            <li>&gt;</li>
+        {{ end }}
     {{ else if not .p1.IsHome }}
         {{ template "breadcrumbnav" (dict "p1" .p1.Site.Home "p2" .p2 )  }}
         <li>&gt;</li>
     {{ end }}
-
+    
+    {{ if not (eq (.p1.Kind) "taxonomyTerm") }}
     <li{{ if eq .p1 .p2 }} class="active" {{ end }}>
-        <a href="{{ .p1.Permalink }}">{{ .p1.Title }}</a>
+        <a href="{{ .p1.Permalink }}">{{ .p1.Title | humanize }}</a>
     </li>
+    {{ end }}
 {{ end }}

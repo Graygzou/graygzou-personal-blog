@@ -7,52 +7,57 @@
   <h1>{{ .Title }}</h1>
 
   {{- if .InSection .FirstSection -}}
-  {{ .Content }}
-  <section>
-      <!-- Special layout for main posts/_index.html page -->
-      {{/* Merge the if into the range with the where do not work properly.. */}}
-      {{ $paginator := .Paginate .Pages }}
-      {{ range $paginator.Pages }}
-          {{- if in site.Params.blogSections (path.Base .Dir) -}}
-            {{ $sectionname := .Name }}
-            {{ $pages := (where .Site.RegularPages "Section" "posts") }}
-            {{ $blogPosts := .Paginate (where $pages "Parent.Name" "eq" ($sectionname | string)) }}
-            {{- if gt $blogPosts.NumberOfElements 0 -}}
-              <div class="project-li">
-                <!-- Quick description of the current section -->
-                {{- partial "boxes-section-list" (dict "context" . "fullcontent" false) -}}
 
-                <!-- List all the newest posts. Others will be available thanks to the archive button -->
-                <ul class="classic-ul">
-                {{ $.Scratch.Set "nbPost" 0 }}
-                {{ $postsPaginator := .Paginate (where $pages "Parent.Name" "eq" ($sectionname | string)) }}
-                {{ range first $.Site.Params.nbPostSectionPreview $postsPaginator.Pages }}
-                  {{ $index := $.Scratch.Get "nbPost" }}
-                  <li class="post-teaser">
-                    <date datetime="{{ .Date.Format (i18n `postdateformat`) }}" class="tag">
-                        {{ .Date.Format (i18n "postdateformat") }}
-                    </date> 
-                    <h3><a href="{{ .RelPermalink }}" class="blog-post-title">{{ .Title | truncate 35 }}</a></h3>
-                    {{ if .Params.description  }}
-                        {{- .Params.description | markdownify | truncate 110 -}}
-                    {{ else }}
-                        {{- .Summary | truncate 110 -}}
+    {{ .Content }}
+
+    <!-- Create tags navigation -->
+    {{ partial "tag-navigation" (dict "context" .) }}
+
+    <section class="blog-section-container">
+        <!-- Special layout for main posts/_index.html page -->
+        {{/* Merge the if into the range with the where do not work properly.. */}}
+        {{ $paginator := .Paginate .Pages }}
+        {{ range $paginator.Pages }}
+            {{- if in site.Params.blogSections (path.Base .Dir) -}}
+              {{ $sectionname := .Name }}
+              {{ $pages := (where .Site.RegularPages "Section" "posts") }}
+              {{ $blogPosts := .Paginate (where $pages "Parent.Name" "eq" ($sectionname | string)) }}
+              {{- if gt $blogPosts.NumberOfElements 0 -}}
+                <div class="project-li">
+                  <!-- Quick description of the current section -->
+                  {{- partial "boxes-section-list" (dict "context" . "fullcontent" false) -}}
+
+                  <!-- List all the newest posts. Others will be available thanks to the archive button -->
+                  <ul class="classic-ul">
+                  {{ $.Scratch.Set "nbPost" 0 }}
+                  {{ $postsPaginator := .Paginate (where $pages "Parent.Name" "eq" ($sectionname | string)) }}
+                  {{ range first $.Site.Params.nbPostSectionPreview $postsPaginator.Pages }}
+                    {{ $index := $.Scratch.Get "nbPost" }}
+                    <li class="post-teaser">
+                      <date datetime="{{ .Date.Format (i18n `postdateformat`) }}" class="tag">
+                          {{ .Date.Format (i18n "postdateformat") }}
+                      </date> 
+                      <h3><a href="{{ .RelPermalink }}" class="blog-post-title">{{ .Title | truncate 35 }}</a></h3>
+                      {{ if .Params.description  }}
+                          {{- .Params.description | markdownify | truncate 110 -}}
+                      {{ else }}
+                          {{- .Summary | truncate 110 -}}
+                      {{ end }}
+                    </li>
+                    {{ if and (lt $index (sub $.Site.Params.nbPostSectionPreview 1)) (lt $index (sub $postsPaginator.NumberOfElements 1)) }}
+                      <div style="text-align: center;">- - -</div>
                     {{ end }}
-                  </li>
-                  {{ if and (lt $index (sub $.Site.Params.nbPostSectionPreview 1)) (lt $index (sub $postsPaginator.NumberOfElements 1)) }}
-                    <div style="text-align: center;">- - -</div>
-                  {{ end }}
-                  {{ $.Scratch.Add "nbPost" 1 }}
-                {{ end }} <!-- Loop over blog posts -->
-                </ul>
+                    {{ $.Scratch.Add "nbPost" 1 }}
+                  {{ end }} <!-- Loop over blog posts -->
+                  </ul>
 
-                <!-- Archive button -->
-                <a href="{{ .RelPermalink }}">Archives &raquo;</a>
-              </div>
-            {{- end -}} <!-- if NumberOfElements > 0 -->
-          {{- end -}} <!-- if section in Params.blogSections -->
-      {{ end }}
-  </section>
+                  <!-- Archive button -->
+                  <a href="{{ .RelPermalink }}">Archives &raquo;</a>
+                </div>
+              {{- end -}} <!-- if NumberOfElements > 0 -->
+            {{- end -}} <!-- if section in Params.blogSections -->
+        {{ end }}
+    </section>
 
   {{- else -}}
     <!-- Layout for the rest of folders inside posts/ folder -->

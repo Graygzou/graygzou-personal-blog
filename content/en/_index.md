@@ -1,5 +1,6 @@
 ---
 title: "Welcome"
+aliases: [/tags/]
 ---
 
 The purpose of this blog is to share my knowledge but also share my struggle as I go through different topics in my computer science engineers life.

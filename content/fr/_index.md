@@ -1,5 +1,6 @@
 ---
 title: "Bienvenue"
+aliases: [/fr/tags/]
 ---
 
 Le but de ce blog est de partager ma connaissance mais aussi partager mes découvertes sur différents sujets en rapport avec l'informatique.

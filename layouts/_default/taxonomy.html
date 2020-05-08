@@ -4,17 +4,14 @@
 
 {{ define "main" }}
 
-  <h1>{{ .Title | humanize }}</h1>
+  <h1>#{{ .Title | humanize }}</h1>
 
   {{ .Content }}
-
 
   <!-- Create tags navigation -->
   {{ partial "tag-navigation" (dict "context" .) }}
 
-  <ul>
-    {{ $pages := .Pages }}
-    {{ partial "section-list" (dict "context" . "fullcontent" false "sectionposts" $pages) }}
-  </ul>
+  {{ $pages := .Pages }}
+  {{ partial "section-list" (dict "context" . "fullcontent" false "sectionposts" $pages) }}
 
 {{ end }}
