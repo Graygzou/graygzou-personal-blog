@@ -1,8 +1,9 @@
 <h2>Hot finding</h2>
+{{ with index $.context.Site.Data.hotfinding $.context.Site.Language.Lang }}
 <!-- Center this ? -->
-{{ $.context.Scratch.Set "count" (len .context.Site.Data.hotfinding) }}
+{{ $.context.Scratch.Set "count" (len .hotfinding) }}
 {{ $.context.Scratch.Set "index" 1 }}
-{{ range $elem_key, $elem_val := (sort .context.Site.Data.hotfinding "order" "asc") }}
+{{ range $elem_key, $elem_val := (sort .hotfinding "order" "asc") }}
     <!-- We only care about the last element -->
     {{ if eq ($.context.Scratch.Get "index") ($.context.Scratch.Get "count") }}
         <div>
@@ -36,4 +37,5 @@
         </div>
     {{ end }}
     {{ $.context.Scratch.Add "index" 1 }}
+{{ end }}
 {{ end }}
