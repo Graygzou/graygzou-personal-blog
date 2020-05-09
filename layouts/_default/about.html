@@ -5,16 +5,16 @@
 
     <form class="about-form" action="{{ $.Site.Params.formspreeEndpoint }}" method="POST">
         <!-- TODO: Translate that -->
-        <span>Fell free to fill up the contact form below to reach me:</span>
+        <span>{{ i18n "about-messaging-notice" }}</span>
         <fieldset>
             <label for="name">{{ (i18n "yourName") }}</label>
-            <input id="name" type="text" name="name" placeholder="First and Last" required aria-labelledby="name"/>
+            <input id="name" type="text" name="name" placeholder="John Doe" required aria-labelledby="name"/>
             
             <label for="email">{{ i18n "emailAddress" }}</label>
             <input id="email" type="text" name="_replyto" required placeholder="email@domain.tld" aria-labelledby="email" />
         
             <label for="message">{{ i18n "message" }}</label>
-            <textarea rows="5" id="message" name="message" required placeholder="Your message goes here"></textarea>
+            <textarea rows="5" id="message" name="message" required placeholder="{{ i18n "message" }}"></textarea>
             <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
         </fieldset>
         <input type="submit" class="contact-button" value="{{ i18n "send" }}" />
